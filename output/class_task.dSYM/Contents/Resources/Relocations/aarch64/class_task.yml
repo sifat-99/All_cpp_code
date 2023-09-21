@@ -1,0 +1,10 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/sifat/Desktop/C++/output/class_task'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: __Z14area_rectangle6square, symObjAddr: 0x0, symBinAddr: 0x100003EE0, symSize: 0x1C }
+  - { offsetInCU: 0x2C66, offset: 0x2C66, size: 0x8, addend: 0x0, symName: __Z14area_rectangle6square, symObjAddr: 0x0, symBinAddr: 0x100003EE0, symSize: 0x1C }
+  - { offsetInCU: 0x2C92, offset: 0x2C92, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x1C, symBinAddr: 0x100003EFC, symSize: 0x48 }
+  - { offsetInCU: 0x2D0F, offset: 0x2D0F, size: 0x8, addend: 0x0, symName: __ZN6squareC1Ev, symObjAddr: 0x64, symBinAddr: 0x100003F44, symSize: 0x2C }
+  - { offsetInCU: 0x2D37, offset: 0x2D37, size: 0x8, addend: 0x0, symName: __ZN6squareC2Ev, symObjAddr: 0x90, symBinAddr: 0x100003F70, symSize: 0x24 }
+...
