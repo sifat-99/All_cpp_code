@@ -1,38 +1,36 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <string>
 using namespace std;
-int main(){
-    int n;
-    cin >> n;
-    int a[n];
-    int b[n];
-    for(int i = 0; i < n; i++){
-        cin >> a[i];
-        b[i] = a[i];
-    }
-    sort(b, b + n);
-    int l = 0, r = n - 1;
-    while(l < n && a[l] == b[l]) l++;
-    while(r >= 0 && a[r] == b[r]) r--;
-    if(l >= r){
-        cout << "yes" << endl;
-        cout << 1 << " " << 1 << endl;
-    }
-    else{
-        reverse(a + l, a + r + 1);
-        bool flag = true;
-        for(int i = 0; i < n; i++){
-            if(a[i] != b[i]){
-                flag = false;
-                break;
-            }
+
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        string s;
+        cin>>s;
+        if(s[0]=='a' && s[1]=='b' && s[2]=='c'){
+            cout<<"YES"<<endl;
         }
-        if(flag){
-            cout << "yes" << endl;
-            cout << l + 1 << " " << r + 1 << endl;
+        else if(s[0]=='a' && s[1]=='c' && s[2]=='b'){
+            cout<<"YES"<<endl;
+        }
+        else if(s[0]=='b' && s[1]=='a' && s[2]=='c'){
+            cout<<"YES"<<endl;
+        }
+        else if(s[0]=='b' && s[1]=='c' && s[2]=='a'){
+            cout<<"YES"<<endl;
+        }
+        else if(s[0]=='c' && s[1]=='a' && s[2]=='b'){
+            cout<<"YES"<<endl;
+        }
+        else if(s[0]=='c' && s[1]=='b' && s[2]=='a'){
+            cout<<"YES"<<endl;
         }
         else{
-            cout << "no" << endl;
+            cout<<"NO"<<endl;
         }
     }
     return 0;
 }
+
+
