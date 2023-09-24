@@ -1,28 +1,28 @@
-#include<iostream>
-using namespace std;
-class stringSum{
-    public:
-    string name1,name2,sum;
-    stringSum(string name)
-    {
-        sum =name;
-    }
-    stringSum()
-    {
+// #include<iostream>
+// using namespace std;
+// class stringSum{
+//     public:
+//     string name1,name2,sum;
+//     stringSum(string name)
+//     {
+//         sum =name;
+//     }
+//     stringSum()
+//     {
         
-    }
+//     }
 
-    void output()
-    {
-            cout<<sum<<endl;
-    }
-    stringSum operator+(stringSum &ob)
-    {
-        stringSum object;
-        object.sum = this->sum+' '+ob.sum;
-        return object;
-    }
-};
+//     void output()
+//     {
+//             cout<<sum<<endl;
+//     }
+//     stringSum operator+(stringSum &ob)
+//     {
+//         stringSum object;
+//         object.sum = this->sum+' '+ob.sum;
+//         return object;
+//     }
+// };
 
 
 // int main()
@@ -69,28 +69,28 @@ class stringSum{
 // }
 
 
-#include<iostream>
-using namespace std;
-class Box1{
-    public:
-    int width,length,hight;
-    Box1()
-    {
+// #include<iostream>
+// using namespace std;
+// class Box1{
+//     public:
+//     int width,length,hight;
+//     Box1()
+//     {
 
-    }
-};
-class Box2{
-    public:
-    int width,length,hight;
+//     }
+// };
+// class Box2{
+//     public:
+//     int width,length,hight;
     
-};
-void Total(Box1 object, Box2 object2)
-{
+// };
+// void Total(Box1 object, Box2 object2)
+// {
 
-}
+// }
 
-int main()
-{
-    Box1 ob1;
-    Box2 ob2;
-}
+// int main()
+// {
+//     Box1 ob1;
+//     Box2 ob2;
+// }
