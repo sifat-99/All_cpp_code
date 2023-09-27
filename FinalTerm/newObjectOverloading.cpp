@@ -1,10 +1,7 @@
 #include <iostream>
-
 using namespace std;
-
 class MyArray {
 private:
-
 public:
     int *arr;
     int size;
@@ -36,21 +33,46 @@ public:
     }
 
     ~MyArray() {
+        delete[] arr;
+    }
+
+    int getTotalSum()  {
+        int sum = 0;
+        for (int i = 0; i < size; ++i) {
+            sum += arr[i];
+        }
+        return sum;
     }
 };
 
+int compareTotalSum( MyArray& arr1,  MyArray& arr2) {
+    int sum1 = arr1.getTotalSum();
+    int sum2 = arr2.getTotalSum();
+
+    cout << "Sum1: " << sum1 << endl;
+    cout << "Sum2: " << sum2 << endl;
+
+    if (sum1 < sum2) {
+        return -1;
+    } else if (sum1 > sum2) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
 int main() {
     int size;
-    cout<<"Enter the Array Size: ";
-    cin>>size;;
+    cout << "Enter the Array Size: ";
+    cin >> size;
     MyArray arr1(size);
     MyArray arr2(size);
     MyArray arr3(size);
-    cout << "Enter Second "<<size<<" elements for first array: ";
+    cout << "Enter " << size << " elements for the first array: ";
     for (int i = 0; i < size; ++i) {
         cin >> arr1.arr[i];
     }
-    cout << "Enter Second "<<size<<" elements for second array: ";
+    cout << "Enter " << size << " elements for the second array: ";
     for (int i = 0; i < size; ++i) {
         cin >> arr2.arr[i];
     }
@@ -59,10 +81,15 @@ int main() {
     arr1.display();
     cout << "Array 2: ";
     arr2.display();
-    MyArray sum = arr1 + arr2;
-    cout << "Sum of Arrays: ";
-    sum.display();
-    arr3 = arr1+ arr2;
+
+    int comparison = compareTotalSum(arr1, arr2);
+    if (comparison < 0) {
+        cout << "Total sum of Array 1 is smaller." << endl;
+    } else if (comparison > 0) {
+        cout << "Total sum of Array 2 is smaller." << endl;
+    } else {
+        cout << "Total sums of both arrays are equal." << endl;
+    }
 
     return 0;
 }

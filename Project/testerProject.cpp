@@ -1,185 +1,211 @@
+/*
+|-----------------------------------------------------------------------------------------|
+| Project Name: Typing Speed Tester by MagPie                                             |
+|-----------------------------------------------------------------------------------------|
+| Author:                                | PROJECT SUBMISSION DATE  : 27.09.2023          |
+|                                        | PROJECT ASSIGNED BY      :                     |
+| Sajidul Islam Samin                    | Humayra Ahmed                                  |
+| Abdur Rahman Sifat.                    | Assistant Professor                            |
+| Mahamudul Hasan                        | Department of Computer Science and Engineering |
+| Shahriar Chowdhury                     | Bangladesh University of Business & Technology |
+| Mehedi Al Mahmud                       | (BUBT)                                         |
+|                                        |                                                |
+|                                        |                                                |
+|-----------------------------------------------------------------------------------------|
+| project description: This project is a typing speed tester.                             |
+| It will take a paragraph as input and then it will show the typing speed of the user.   |
+| It will also show the accuracy of the user.                                             |
+|-----------------------------------------------------------------------------------------|
 
-//header file..
-#include<stdio.h>
-#include<string.h>
-#include<time.h>
-// #include<conio.h>
-#include<stdlib.h>
+*/
 
-//file pointer..
-FILE *fp;
-
-//prototype of all function..
-void heading();
-void instruction();
-void mainMenu();
-void Speed_Test();
-void calculation();
-
-//globally declare
+#include <bits/stdc++.h>
+#include <unistd.h>
+using namespace std;
 int duration, wrong=0, score;
-char user_name[30];
+string name;
 
-//This is our main function...
+void heading();
+    void mainMenu();
+        void delay(unsigned int microseconds);
+            void clearScreen();
+                void extras();
+                    void Speed_Test();
+
 int main()
 {
-    heading();
-    mainMenu();
 
+
+    heading();
+            mainMenu();
+                extras();
+
+    getchar();
     return 0;
 }
+void heading()
+{
+    clearScreen();
+    int i;
+    string massage = "Welcome To Typing Speed Tester";
 
-//define mainMenu function...
+    cout << "\n\n\t\t\t\t\t\t";
+    for (i = 0; i < massage.length(); i++)
+    {
+        cout << massage[i];
+        fflush(stdout);
+        delay(50000);
+    }
+
+    cout << endl
+         << endl
+         << endl
+         << endl;
+
+    string nameMessage="Enter your name to continue : ";
+    for(int i=0; i<nameMessage.length(); i++)
+    {
+            cout<<nameMessage[i];
+            fflush(stdout);
+            delay(50000);
+    }
+
+    cin >> name;
+    cout << endl;
+    cout << "Hi " << name << ","
+         << " Welcome to Typing Speed Tester" << endl
+         << endl;
+}
+
 void mainMenu()
 {
-    system("cls");
+    clearScreen();
 
     int choice;
-    char c_massage[] = {"Enter Your Choice : "};
 
-    printf("\n\n\t\tMenu List");
-    printf("\n\n\t\t1. Test Speed\n");
-    printf("\t\t2. User Record\n");
-    printf("\t\t3. Help\n");
-    printf("\t\t4. Exit\n");
+    string c_massage = "Enter Your Choice : ";
 
-    for(int i=0; i<20; i++){
-        printf("%c", c_massage[i]);
-        for(int j=0; j<10099990; j++){
-            j++;j--;
-        }
+    cout << "                                                            "
+         << " MenuList" << endl;
+    cout << "                                                         ________________" << endl
+         << endl;
+    cout << "                                                          1. Test Speed" << endl;
+    cout << "                                                          2. User Record\n";
+    cout << "                                                          3. Help\n";
+    cout << "                                                          4. Exit\n\n\n";
+
+    for (int i = 0; i < c_massage.length(); i++)
+    {
+        cout << c_massage[i];
+        fflush(stdout);
+        delay(50000);
     }
-    //input choice..
-    fflush(stdin);
-    scanf("%d", &choice);
 
-    if(choice ==1 ){
+    fflush(stdin);
+    cin >> choice;
+
+    if (choice == 1)
+    {
+        // Handle choice 1
+        extras();
         Speed_Test();
     }
-    else if(choice == 2){
-        system("cls");
-        char uname[50];
+    else if (choice == 2)
+    {
+        clearScreen();
+        string uname;
         int c_choice;
-        char footer[]={"Press 0 For Go To Main Menu : "};
+        string footer = "Press 0 To Go Main Menu : ";
 
-        fp=fopen("score.txt","r");
-        printf("\n\nUser Name & Score\n\n");
-        while(fgets(uname,50,fp)!= NULL){
-            printf("\t%s",uname);
+        cout << "\n\n\t";
+        for (int i = 0; i < footer.length(); i++)
+        {
+            cout << footer[i];
+            fflush(stdout);
+            delay(50000);
         }
-        fclose(fp);
+        cin >> c_choice;
 
-        printf("\n\n\t");
-        for(int i=0; i<30; i++){
-            printf("%c", footer[i]);
-            for(int j=0; j<7099990; j++){
-                j++;j--;
-            }
-        }
-        scanf("%d", &c_choice);
-
-        if(c_choice == 0)
+        if (c_choice == 0)
             mainMenu();
     }
-    else if(choice == 3){
+    else if (choice == 3)
+    {
         int c_choice;
-        char footer[]={"Press 0 For Go To Main Menu : "};
-        instruction();
+        string footer = "Press 0 To Go Main Menu : ";
 
-        printf("\n\n\t");
-        for(int i=0; i<30; i++){
-            printf("%c", footer[i]);
-            for(int j=0; j<7099990; j++){
-                j++;j--;
-            }
+        cout << "\n\n\t";
+        for (int i = 0; i < footer.length(); i++)
+        {
+            cout << footer[i];
+            fflush(stdout);
+            delay(50000);
         }
-        scanf("%d", &c_choice);
+        cin >> c_choice;
 
-        if(c_choice == 0)
+        if (c_choice == 0)
             mainMenu();
     }
-    else if(choice == 4){
-        system("cls");
-        char lastm[]= {"Thanks for visit to Typing Speed Tester"};
-        printf("\n\n\n\n\n\n\t\t\t");
-        for(int i=0; i<39; i++){
-            printf("%c", lastm[i]);
-            for(double i=0; i<5000000; i++){
-                i++;i--;
-            }
+    else if (choice == 4)
+    {
+        clearScreen();
+        string lastm = "Thanks for visiting Typing Speed Tester";
+        cout << "\n\n\n\n\n\n\t\t\t";
+        for (int i = 0; i < lastm.length(); i++)
+        {
+            cout << lastm[i];
+            fflush(stdout);
+            delay(50000);
         }
-        printf("\n");
+        cout << "\n";
 
-        char lastn[9]= {"Wait...."};
-        printf("\n\n\t\t\t\t\t");
-        for(int i=0; i<8; i++){
-            printf("%c", lastn[i]);
-            for(double i=0; i<50000000; i++){
-                i++;i--;
-            }
+        string lastn = "Wait....";
+        cout << "\n\n\t\t\t\t\t";
+        for (int i = 0; i < 8; i++)
+        {
+            cout << lastn[i];
+            fflush(stdout);
+            delay(50000);
         }
-        printf("\n\n\n\n\n\n\n");
-        for(int i=1; i<1e9; i++){
-
+        cout << "\n\n\n\n\n\n\n";
+        extras();
+        for (int i = 1; i < 1e9; i++)
+        {
         }
         exit(0);
     }
-
 }
 
-//Define heading function..
-void heading()
+void extras()
 {
-    int i;
-    char massage[] = {"Welcome To Typing Speed Tester"};
-
-    printf("\n\n\n\n\t");
-    for(i=0; i<30; i++){
-        printf("%c", massage[i]);
-        for(int j=0; j<10099990; j++){
-            j++;j--;
-        }
-    }
-    // getch();
-    instruction();
-    printf("\n\nTo open Enter User Name : ");
-    fflush(stdin);
-    gets(user_name);
+    cout << endl
+         << endl
+         << endl
+         << endl;
+    cout << "                                             "
+         << "All rights reserved by Team 'MagPie' 2023";
+    cout << endl
+         << endl
+         << endl;
+         fflush(stdout);
+         delay(1000000);
 }
 
-//Define instruction function...
-void instruction()
-{
-    system("cls");
-
-    printf("\t\t**SHORT INSTRUCTION**\n\n");
-
-    printf("# This project is useful to test/measure the typing\n");
-    printf("  speed of a user.\n");
-    printf("# User must use a whitespace (\" \") between two letter.\n");
-    printf("# User must type all letter according the Display.\n");
-    printf("# It shows Percentage, Score and LPM(Letter Per Minute).\n");
-}
-
-
-//define sample function...
 void Speed_Test()
 {
     int chk[10];
     srand(time(0));
     for(int i=0; i<3; i++){
-        for(int j=0; j<10099990; j++){
-            j++;j--;
-        }
         chk[i] = rand()%10;
+        fflush(stdout);
+        delay(50000);
     }
 
-    system("cls");
-
+    clearScreen();
+    
     time_t start, end;
     start = time(NULL);
 
-    //INITIALIZE 3 LINE TO TEST..
     char line1[] = {"A B C D E F G H I J K L M N O P"};
     char line2[] = {"A b C d E f G h I j K l M n O p"};
     char line3[] = {"a b C d e F g h I j k L m n O p"};
@@ -190,8 +216,6 @@ void Speed_Test()
     char line8[] = {"h i J K L m a B C d a e D c B F"};
     char line9[] = {"g h i d e h i J K L m L m n O p"};
     char line10[] = {"m L k J i H g h I j k F g h I j"};
-
-    //SHOW THIS WHEN USER START TEST...
     for(int i=0; i<3; i++){
         if(chk[i]==0){
             printf("\n\n");
@@ -257,12 +281,10 @@ void Speed_Test()
 
     printf("\nType Here..\n\n");
 
-    //INPUT FROM USER...
     char testL1[32];
     char testL2[32];
     char testL3[32];
 
-    //1st line input from user...
     if(chk[0]==0){
         fflush(stdin);
         for(int i=0; i<sizeof(line1)-1; i++){
@@ -344,7 +366,6 @@ void Speed_Test()
         }
     }
 
-    //2nd line input from user...
     if(chk[1]==0){
         fflush(stdin);
         for(int i=0; i<sizeof(line1)-1; i++){
@@ -426,7 +447,6 @@ void Speed_Test()
         }
     }
 
-    //3rd line input from user...
     if(chk[2]==0){
         fflush(stdin);
         for(int i=0; i<sizeof(line1)-1; i++){
@@ -510,113 +530,25 @@ void Speed_Test()
     end = time(NULL);
     duration = difftime(end, start);
 
-    calculation();
+    // calculation();
 }
 
-//define calcultion function....
-void calculation()
-{
-    double percent, right;
-    int LPM, a_choice;
-    char s_ch = '%';
-
-    right = 48-wrong;
-    percent = (100.0*right)/48;
-
-    if(100 >= percent && percent >= 90)
-        score = 100;
-    else if(90 > percent && percent >= 80)
-        score = 90;
-    else if(80 > percent && percent >= 70)
-        score = 80;
-    else if(70 > percent && percent >= 60)
-        score = 70;
-    else if(60 > percent && percent >= 50)
-        score = 60;
-    else if(50 > percent && percent >= 40)
-        score = 50;
-    else if(40 > percent && percent >= 30)
-        score = 40;
-    else if(30 > percent && percent >= 20)
-        score = 30;
-    else if(20 > percent && percent >= 10)
-        score = 20;
-    else if(10 > percent && percent >= 1)
-        score = 10;
-    else
-        score = 0;
-
-    LPM = (48*60)/duration;
-
-//printing users result...
-    system("cls");
-    char s_massage[]={"Mr. "};
-    char r_massage[]={" Here is Result"};
-
-    printf("\n\n\t\t");
-    for(int i =0; i<4; i++){
-        printf("%c", s_massage[i]);
-        for(int j=0; j<10099990; j++){
-            j++;
-            j--;
-        }
-    }
-    for(int i =0; i<strlen(user_name); i++){
-        printf("%c", user_name[i]);
-        for(int j=0; j<10099990; j++){
-            j++;
-            j--;
-        }
-    }
-    for(int i=0; i<15; i++){
-        printf("%c", r_massage[i]);
-        for(int j=0; j<10099990; j++){
-            j++;
-            j--;
-        }
-    }
-
-    printf("\n\n\tPercentage Of Right is  : %.2lf%c", percent, s_ch);
-    printf("\n\tLetter Per Minute is    : %d", LPM);
-    printf("\n\tTotal Score of Yours is : %d\n", score);
 
 
-    fp=fopen("score.txt","a");
-    fprintf(fp, "%s (%d)\n", user_name,score);
-    fclose(fp);
 
-
-    char footer[]={"If Test Again Press 1If go to Main Menu Press 2Enter Your Choice :"};
-    printf("\n\n\t");
-    for(int i=0; i<21; i++){
-        printf("%c", footer[i]);
-        for(int j=0; j<7099990; j++){
-            j++;
-            j--;
-        }
-    }
-    printf("\n\t");
-    for(int i=21; i<47; i++){
-        printf("%c", footer[i]);
-        for(int j=0; j<7099990; j++){
-            j++;
-            j--;
-        }
-    }
-    printf("\n\n\t");
-    for(int i=47; i<66; i++){
-        printf("%c", footer[i]);
-        for(int j=0; j<7099990; j++){
-            j++;
-            j--;
-        }
-    }
-    scanf("%d", &a_choice);
-    if(a_choice == 1){
-        wrong =0;
-        Speed_Test();
-    }
-
-    else if(a_choice ==2)
-        mainMenu();
+void delay(unsigned int microseconds) {
+    usleep(microseconds);
 }
+void clearScreen() {
+    printf("\033[H\033[J");
+}
+
+
+// void delay()
+// {
+//     for (int i = 0; i < 10099990; i++)
+//     {
+//         i++;
+//         i--;
+//     }
+// }

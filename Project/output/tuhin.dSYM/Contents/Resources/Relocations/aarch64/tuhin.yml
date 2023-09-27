@@ -1,0 +1,10 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/sifat/Desktop/C++/Project/output/tuhin'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: __Z18generateBillHeaderPcS_b, symObjAddr: 0x0, symBinAddr: 0x100002DE8, symSize: 0xE4 }
+  - { offsetInCU: 0x46, offset: 0x46, size: 0x8, addend: 0x0, symName: __Z18generateBillHeaderPcS_b, symObjAddr: 0x0, symBinAddr: 0x100002DE8, symSize: 0xE4 }
+  - { offsetInCU: 0x8A, offset: 0x8A, size: 0x8, addend: 0x0, symName: __Z16generateBillBodyPcif, symObjAddr: 0xE4, symBinAddr: 0x100002ECC, symSize: 0x60 }
+  - { offsetInCU: 0xCE, offset: 0xCE, size: 0x8, addend: 0x0, symName: __Z18generateBillFooterfb, symObjAddr: 0x144, symBinAddr: 0x100002F2C, symSize: 0xF4 }
+  - { offsetInCU: 0x120, offset: 0x120, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x238, symBinAddr: 0x100003020, symSize: 0x8BC }
+...
