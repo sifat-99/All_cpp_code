@@ -27,9 +27,19 @@ public:
             sum1 += arr[i];
             sum2 += other.arr[i];
         }
+        return sum1 > sum2;
+    }
+    bool operator<(MyArray &other)
+    {
+        int sum1 = 0, sum2 = 0;
+        for (int i = 0; i < size; i++)
+        {
+            sum1 += arr[i];
+            sum2 += other.arr[i];
+        }
         cout << "Sum of array 1: " << sum1 << endl
              << "Sum of array 2: " << sum2 << endl;
-        return sum1 > sum2;
+        return sum1 < sum2;
     }
     void display()
     {
@@ -68,9 +78,13 @@ int main()
     {
         cout << "Sum of Array 1 is greater than Sum of Array 2" << endl;
     }
+    else if(arr1 < arr2)
+    {
+        cout << "Sum of Array 2 is greater than Sum of Array 1" << endl;
+    }
     else
     {
-        cout << "Sum of Array 1 is less to Sum of Array 2" << endl;
+        cout << "Sum of Array 1 is equal to Sum of Array 2" << endl;
     }
     return 0;
 }
