@@ -6,18 +6,19 @@ class Box1{
     int width,length,hight,area;
     Box1()
     {
+        cout<<"Enter the width, length and hight of the first box:\t";
         cin>>width>>length>>hight;
 
         area = width*length*hight;
     }
-    friend int operator>(Box1,Box2);
-    
+    friend int operator>(Box1,Box2);  
 };
 class Box2{
     public:
     int width,length,hight,area2;
     Box2()
     {
+        cout<<"Enter the width, length and hight of the second box:\t";
         cin>>width>>length>>hight;
 
         area2 = width*length*hight;
@@ -31,14 +32,14 @@ int operator>(Box1 ob,Box2 oo)
 }
 int main()
 {
-    Box1 object1, object2;
-    Box2 ob1,ob2;
+    Box1 object1;
+    Box2 ob1;
     if(object1>ob1)
     {
-        cout<<"1";
+        cout<<"Box 1 is greater than box 2";
     }
     else{
-        cout<<"2";
+        cout<<"Box 2 is greater than box 1";
     }
 
 }
