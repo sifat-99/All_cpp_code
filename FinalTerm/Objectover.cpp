@@ -29,7 +29,6 @@ int main()
 
 
 
-
 // Class Practice 2 object area compare.. using object overloading with constructor.
 
 #include<iostream>
