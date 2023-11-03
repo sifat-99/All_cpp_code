@@ -32,17 +32,12 @@ template<typename T, typename U>
 
 T GreaterValue(T a[], T m)
 {
-
 float sum=0;
-
 for(int i=0;i<m;i++)
 {
     sum = sum+a[i];
 }
-
 return sum;
-
-
 }
 
 int main()
@@ -51,7 +46,7 @@ int main()
     int length,i;
     cin>>length;
 
-    float arr[length];
+    float arr[length];                      //[0,1,2,3,4] => arr= [10,20,5,6,7]
     for( i =0; i<length;i++)
     {
             cin>>arr[i];
