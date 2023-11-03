@@ -1,0 +1,12 @@
+
+sifat (100)
+sifat (144)(40)
+Name: sifat 	Letter Per Minutes: (160) Score: (100)
+Name: s 	Letter Per Minutes: (151) Score: (100)
+Name: sifat 	Letter Per Minutes: (144) Score: (100)
+Name: sifat Word Per Minutes: (0) Score: (100)
+Name: sifat 	Letter Per Minutes: (0) Score: (100)
+Name: sifat 	Word Per Minutes: (17.00) Score: (90)
+Name: sifat 	Letter Per Minutes: (17.00) Score: (90)
+Name: s 	Word Per Minutes: (30.00) Score: (60)
+Name: s 	Letter Per Minutes: (30.00) Score: (60)

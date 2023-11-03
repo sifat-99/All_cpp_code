@@ -1,0 +1,1 @@
+{"name":"Local: ProblemD","url":"/Users/sifat/Desktop/C++/ICPC Contest 13-10-23/ProblemD.cpp","tests":[{"id":1697193738141,"input":"2\naa\naa\nabc\nabd","output":"4\n3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/sifat/Desktop/C++/ICPC Contest 13-10-23/ProblemD.cpp","group":"local","local":true}

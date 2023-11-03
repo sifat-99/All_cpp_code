@@ -1,0 +1,1 @@
+{"name":"Local: ProblemA","url":"/Users/sifat/Desktop/C++/ICPC Contest 13-10-23/ProblemA.cpp","tests":[{"id":1697193010029,"input":"2\n5 3\n3 5 12 15 21\n3 1\n3 3 3","output":"Case 1: 4\nCase 2: 0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/sifat/Desktop/C++/ICPC Contest 13-10-23/ProblemA.cpp","group":"local","local":true}

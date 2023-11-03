@@ -1,0 +1,13 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/sifat/Desktop/C++/FinalTerm/output/Generic2'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003B74, symSize: 0x128 }
+  - { offsetInCU: 0x447B, offset: 0x447B, size: 0x8, addend: 0x0, symName: __ZNSt3__14endlB7v160006IcNS_11char_traitsIcEEEERNS_13basic_ostreamIT_T0_EES7_, symObjAddr: 0x1C4, symBinAddr: 0x100003D38, symSize: 0x58 }
+  - { offsetInCU: 0x44BB, offset: 0x44BB, size: 0x8, addend: 0x0, symName: __ZNSt3__19use_facetB7v160006INS_5ctypeIcEEEERKT_RKNS_6localeE, symObjAddr: 0x2A8, symBinAddr: 0x100003E1C, symSize: 0x2C }
+  - { offsetInCU: 0x6F03, offset: 0x6F03, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003B74, symSize: 0x128 }
+  - { offsetInCU: 0x6F54, offset: 0x6F54, size: 0x8, addend: 0x0, symName: __Z12GreaterValueIfiET_PS0_S0_, symObjAddr: 0x128, symBinAddr: 0x100003C9C, symSize: 0x70 }
+  - { offsetInCU: 0x7077, offset: 0x7077, size: 0x8, addend: 0x0, symName: __ZNSt3__113basic_ostreamIcNS_11char_traitsIcEEElsB7v160006EPFRS3_S4_E, symObjAddr: 0x198, symBinAddr: 0x100003D0C, symSize: 0x2C }
+  - { offsetInCU: 0x70A9, offset: 0x70A9, size: 0x8, addend: 0x0, symName: __ZNKSt3__19basic_iosIcNS_11char_traitsIcEEE5widenB7v160006Ec, symObjAddr: 0x21C, symBinAddr: 0x100003D90, symSize: 0x8C }
+  - { offsetInCU: 0x7115, offset: 0x7115, size: 0x8, addend: 0x0, symName: __ZNKSt3__15ctypeIcE5widenB7v160006Ec, symObjAddr: 0x2D4, symBinAddr: 0x100003E48, symSize: 0x38 }
+...
