@@ -1,15 +1,16 @@
 // #include<bits/stdc++.h>
 #include<iostream>
 using namespace std;
-template<typename f>
-f func(f a, f b, f c)
+template<typename T>
+T func(T a, T b, T c)
 {
     return a+b+c;
 }
 
 int main()
 {
-    cout<< func<int>(3,7,5)<<endl;
+  int a = func<int>(3,7,5);
+  cout<<a;
     cout<< func<double>(3.2,5.5,6.7)<<endl;
 }
 

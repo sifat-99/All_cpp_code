@@ -14,7 +14,7 @@ public:
     }
 };
 template <class T>
-void show(T o)
+T show(T o)
 {
     o.add();
 }
@@ -23,4 +23,5 @@ int main()
 {
     Data ob;
     show(ob);
+    // show<int>(5);
 }

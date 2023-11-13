@@ -3,22 +3,27 @@ using namespace std;
 
 int main()
 {
-    int x;
+    int x,y;
     cin >> x;
+    cin>>y;
     cout << "Before try: " << endl;
     try
     {
 
         cout << "Inside try" << endl;
-        if (x < 0)
+        if (y == 0)
         {
-            throw x;
+            throw "try";
             cout << "throw block" << endl;
         }
     }
-    catch (int x)
+    catch (int y)
     {
         cout << "Exception occurred" << endl;
+    }
+    catch (...)
+    {
+        cout<<"Trowed the word";
     }
     cout << "finished";
     return 0;

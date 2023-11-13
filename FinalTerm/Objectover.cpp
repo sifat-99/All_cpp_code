@@ -36,11 +36,11 @@ using namespace std;
 class box{
     int hight,width,length,volume;
     public:
-    box(int x,int y,int z)
+    box()
     {
-        hight =x;
-        width = y;
-        length = z;
+        cin>>hight;
+        cin>>width;
+        cin>>length ;
         volume = hight*width*length;
     }
     void output()
@@ -54,16 +54,17 @@ class box{
     }
     box operator>(box &ob)
     {
-        box o(0,0,0);
-        cout<<this->volume<<endl<<ob.volume<<endl;
+        box o;
+        // cout<<this->volume<<endl<<ob.volume<<endl;
         o.volume = this->volume>ob.volume;
         return o;
     }
 };
 int main()
 {
-    box ob1(3,3,4),ob2(2,2,4);
-    box ob3(0,0,0);
+    box ob1,ob2;
+    // ob1.func()
+    box ob3;
     ob3 = ob1>ob2;
     ob3.output();
 }

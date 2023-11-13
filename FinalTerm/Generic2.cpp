@@ -1,7 +1,7 @@
 // #include<bits/stdc++.h>
 // using namespace std;
 // template<typename T>
-// void GreaterValue(T a, T b, T c)
+// T GreaterValue(T a, T b, T c)
 // {
 //         if(a>b&&b>c)
 //         {
@@ -20,7 +20,7 @@
 // {
 //     GreaterValue<int>(4,5,6);
 //     GreaterValue<int>(50,40,6);
-//     GreaterValue<float>(4.0,5.6,5.4);
+//     GreaterValue<double>(4.0,5.6,5.4);
 //     GreaterValue<float>(41.4,12.5,5.4);
 // }
 
@@ -43,8 +43,9 @@ return sum;
 int main()
 {
     
-    int length,i;
-    cin>>length;
+    // int length,i;
+    // cin>>length;
+    int length = 5,i;
 
     float arr[length];                      //[0,1,2,3,4] => arr= [10,20,5,6,7]
     for( i =0; i<length;i++)

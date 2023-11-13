@@ -27,7 +27,9 @@ int main()
     ob1.Volume(2,2,3);
     ob2.Volume(1,2,2);
 
-    ob3 = ob1+ob2;
+    ob3 = ob2+ob1;
+    ob1.output();
+    ob2.output();
     ob3.output();
 }
 

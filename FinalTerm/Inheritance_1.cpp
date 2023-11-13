@@ -14,6 +14,7 @@
 //   float area1, area2;
 //   A()
 //   {
+//     // base1 = 10;
 //     cout << "Enter base and height of first triangle: ";
 //     cin >> base1 >> height;
 //     cout<<"Enter base and height of second triangle: ";
@@ -27,6 +28,7 @@
 // public:
 //   void output()
 //   {
+//     // cout<<base1;
 //     if (area1 > area2)
 //     {
 //       cout << "Area 1 is greater then Area 2"<<endl;

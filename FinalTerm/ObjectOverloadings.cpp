@@ -1,9 +1,7 @@
 // increment/ decrement using object overloading
-
 #include<iostream>
 using namespace std;
 class abc{
-
     int n;
     public:
     int m=1;
