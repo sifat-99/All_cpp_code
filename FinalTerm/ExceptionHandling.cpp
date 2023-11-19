@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int main()
 {
     int x,y;
@@ -9,7 +8,6 @@ int main()
     cout << "Before try: " << endl;
     try
     {
-
         cout << "Inside try" << endl;
         if (y == 0)
         {
@@ -23,8 +21,10 @@ int main()
     }
     catch (...)
     {
-        cout<<"Trowed the word";
+        cout<<"Trowed the word and it says the division value is infinity"<<endl;
     }
     cout << "finished";
     return 0;
 }
+
+

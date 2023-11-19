@@ -23,9 +23,13 @@ sum operator-(sum &ob)
 };
 int main()
 {
-    sum ob1,ob2,ob3;
+    sum ob1,ob2,ob3,ob4,ob5;
     ob1.input(20);
     ob2.input(10);
-    ob3 = ob1-ob2;
-    ob3.output();
+    ob3.input(5);
+    ob4 = ob1-ob2;
+    ob5= ob4-ob3;
+    ob5.output();
 }
+
+

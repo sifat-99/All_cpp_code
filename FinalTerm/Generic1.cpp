@@ -1,5 +1,4 @@
-// #include<bits/stdc++.h>
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
 template<typename T>
 T func(T a, T b, T c)
@@ -9,9 +8,9 @@ T func(T a, T b, T c)
 
 int main()
 {
-  int a = func<int>(3,7,5);
-  cout<<a;
-    cout<< func<double>(3.2,5.5,6.7)<<endl;
+  cout<< func<int>(3,7,5);
+  // cout<<a;
+     func<double>(3.2,5.5,6.7);
 }
 
 // ___STEPS___//

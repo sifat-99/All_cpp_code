@@ -6,7 +6,7 @@ class Box1{
     int width,length,hight,area;
     Box1()
     {
-        cout<<"Enter the width, length and hight of the first box:\t";
+        cout<<"\n\nEnter the width, length and hight of the first box: ";
         cin>>width>>length>>hight;
 
         area = width*length*hight;
@@ -18,7 +18,7 @@ class Box2{
     int width,length,hight,area2;
     Box2()
     {
-        cout<<"Enter the width, length and hight of the second box:\t";
+        cout<<"\n\nEnter the width, length and hight of the second box: ";
         cin>>width>>length>>hight;
 
         area2 = width*length*hight;
@@ -43,3 +43,5 @@ int main()
     }
 
 }
+
+

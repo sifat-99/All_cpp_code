@@ -10,10 +10,7 @@ public:
     }
     void output()
     {
-
         cout<<volume<<endl;
-
-
     }
     box operator>(box &ob)
     {
@@ -29,12 +26,18 @@ public:
         ob2.Volume(2,3,4);
         if(ob1.volume>ob2.volume)
         {
+            cout<<ob1.volume<<endl;
+            cout<<ob2.volume<<endl;
              cout<< "1st volume is big volume"<<endl;
              
         }
         else
         {
-            cout<<"not";
+            cout<<ob1.volume<<endl;
+            cout<<ob2.volume<<endl;
+            cout<<"2nd volume is big volume";
         }
 
     }
+
+

@@ -58,3 +58,20 @@ int main()
     p->Output(areaTri,araRec);
 }
 
+
+
+
+
+class per;
+class student : public person
+class faculty : public person
+class TA:public student,public faculty
+
+int main()
+{
+    TA ob;
+}
+
+
+
+// ambagious. problem

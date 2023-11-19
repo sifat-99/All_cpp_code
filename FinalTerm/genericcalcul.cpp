@@ -2,15 +2,15 @@
 using namespace std;
 class shape{
 public:
-    int height,width,Triangle;
-   double Rectangle;
+    int height,width;
+   double Rectangle,Triangle;
 };
 class rectangle:public shape{
 public:
    double calculation(){
-      int Rectangle;
-      int height=4;
-      int width=5;
+      
+       height=4;
+       width=5;
      Rectangle=height*width;
        cout<<Rectangle<<endl;
     return Rectangle;
@@ -19,9 +19,8 @@ public:
 class triangle:public shape{
 public:
  double calculation(){
-      double Triangle;
-      int height=4;
-      int width=5;
+       height=4;
+       width=5;
      Triangle=0.5*height*width;
        cout<<Triangle<<endl;
     return Triangle;
