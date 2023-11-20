@@ -17,3 +17,249 @@
 
 9.    A class called “Shakib Al Hasan” has two operator overloading functions. Now implement a code for the statement: TanzidTamim1= (LitonKumarDas2+2)*TaskinAhmed3 to compile correctly.
 */
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// class Publication {
+// private:
+//     string title;
+//     float price;
+// public:
+//     void getData() {
+//         cout << "Enter title: ";
+//         cin >> title;
+//         cout << "Enter price: ";
+//         cin >> price;
+//     }
+
+//     void putData() {
+//         cout << "Title: " << title << endl;
+//         cout << "Price: " << price << endl;
+//     }
+// };
+
+// class Book : public Publication {
+// public:
+//     int pageCount;
+
+//     void getData() {
+//         Publication::getData();
+//         cout << "Enter page count: ";
+//         cin >> pageCount;
+//     }
+
+//     void putData() {
+//         Publication::putData();
+//         cout << "Page Count: " << pageCount << endl;
+//     }
+// };
+
+// class Tape : public Publication {
+// public:
+//     float playingTime;
+//     void getData() {
+//         Publication::getData();
+//         cout << "Enter playing time (in minutes): ";
+//         cin >> playingTime;
+//     }
+
+//     void putData() {
+//         Publication::putData();
+//         cout << "Playing Time: " << playingTime << " minutes" << endl;
+//     }
+// };
+// int main() {
+//     Book book;
+//     Tape tape;
+
+//     cout << "Enter book details:" << endl;
+//     book.getData();
+
+//     cout << "Enter tape details:" << endl;
+//     tape.getData();
+
+//     cout << "Book details:" << endl;
+//     book.putData();
+
+//     cout << "Tape details:" << endl;
+//     tape.putData();
+//     return 0;
+// }
+
+
+
+// #include <iostream>
+// #include <string>
+// using namespace std;
+
+// class Country {
+// private:
+//     string name;
+// public:
+//     Country(string name) {
+//         this->name = name;
+//     }
+
+//     string getName() {
+//         return name;
+//     }
+
+//     virtual void displayInfo() = 0;
+// };
+
+// class Germany : public Country {
+// private:
+//     string capital;
+// public:
+//     Germany(string name, string capital) : Country(name) {
+//         this->capital = capital;
+//     }
+
+//     void displayInfo() {
+//         cout << "Country: " << getName() << endl;
+//         cout << "Capital: " << capital << endl;
+//     }
+// };
+
+// class Argentina : public Country {
+// private:
+//     string capital;
+// public:
+//     Argentina(string name, string capital) : Country(name) {
+//         this->capital = capital;
+//     }
+
+//     void displayInfo() {
+//         cout << "Country: " << getName() << endl;
+//         cout << "Capital: " << capital << endl;
+//     }
+// };
+
+// class Brasil : public Country {
+// private:
+//     string capital;
+// public:
+//     Brasil(string name, string capital) : Country(name) {
+//         this->capital = capital;
+//     }
+
+//     void displayInfo() {
+//         cout << "Country: " << getName() << endl;
+//         cout << "Capital: " << capital << endl;
+//     }
+// };
+
+// int main() {
+//     Country* countries[3];
+
+//     countries[0] = new Germany("Germany", "Berlin");
+//     countries[1] = new Argentina("Argentina", "Buenos Aires");
+//     countries[2] = new Brasil("Brasil", "Brasilia");
+
+//     for (int i = 0; i < 3; i++) {
+//         countries[i]->displayInfo();
+//         cout << endl;
+//     }
+// }
+
+
+// #include <bits/stdc++.h>
+// using namespace std;
+// int main(){
+//    while (1)
+//    {
+//      try{
+//         char num;
+//         cin>>num;
+//         if (!isdigit(num))
+//         {
+//             throw 1;
+//         }
+//         else
+//         {
+//             cout<<"You enter number: "<<num<<endl;
+//         }
+
+//     }
+//     catch(...){
+//         cout<<"You enter invalid value, Please enter a numeric number"<<endl;
+//         }
+//    }
+//     return 0;
+// }
+
+// #include <bits/stdc++.h>
+// using namespace std;
+// int main(){
+//    while (1)
+//    {
+//      try{
+//         int mark;
+//         cout<<"Enter Mark:";
+//         cin>>mark;
+//         if (mark>40)
+//         {
+//             throw 1;
+//         }
+//         else
+//         {
+//             cout<<"Mark added successfull!!!"<<endl;
+//         }
+
+//     }
+//     catch(...){
+//         cout<<"Sorry!! You cannot enter mark over 40"<<endl;
+//         }
+//    }
+//     return 0;
+// }
+
+
+
+// #include<bits/stdc++.h>
+// using namespace std;
+// class Unary{
+// public:
+// int number;
+
+//     Unary()
+//     {
+//         cin>>number;
+//     }
+//     void operator++()
+//     {
+//         number++;
+//         ++number;
+//         cout<<number<<endl;
+//     }
+//     void operator--()
+//     {
+//         number--;
+//         // --number;
+//         cout<<number<<endl;
+//     }
+// };
+// int main()
+// {
+//     Unary ob;
+//     ++ob;
+//     --ob;
+// }
+#include<bits/stdc++.h>
+using namespace std;
+
+
+template <typename T, typename U>
+T func(T a, U b)
+{
+     return a + b;
+}
+
+int main()
+{
+    char result = func<char, int>('g', 5);
+    cout << "Result: " << result << endl;
+    return 0;
+}
