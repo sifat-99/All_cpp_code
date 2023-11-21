@@ -23,5 +23,4 @@ int main()
 {
     Data ob;
     show(ob);
-    // show<int>(5);
 }

@@ -175,7 +175,7 @@
 //         cin>>num;
 //         if (!isdigit(num))
 //         {
-//             throw 1;
+//             throw 'ja iccha';
 //         }
 //         else
 //         {
@@ -247,19 +247,79 @@
 //     ++ob;
 //     --ob;
 // }
-#include<bits/stdc++.h>
+// #include<bits/stdc++.h>
+// using namespace std;
+
+
+// template <typename T, typename U>
+// T func(T a, U b)
+// {
+//      return a + b;
+// }
+
+// int main()
+// {
+//     char result = func<char, int>('g', 5);
+//     cout << "Result: " << result << endl;
+//     return 0;
+// }
+
+
+
+#include<iostream>
 using namespace std;
-
-
-template <typename T, typename U>
-T func(T a, U b)
+class rectangle{
+private:
+    int length, width;
+public:
+   void get_data(int length, int width)
+    {
+        this->length=length;
+        this->width=width;
+    }
+    void operator++(int){
+    length++;
+    width++;
+    }
+  
+int area()
 {
-     return a + b;
+    return length*width;
+}
+bool operator >(rectangle &a)
+{
+    if(area()>a.area())
+    return true;
+    else
+        return false;
 }
 
+bool operator== (rectangle &a)
+{
+    if(area()==a.area())
+    {
+        return true;
+    }
+    return false;
+
+}
+
+
+};
 int main()
 {
-    char result = func<char, int>('g', 5);
-    cout << "Result: " << result << endl;
-    return 0;
+    rectangle r1,r2;
+    r1.get_data(3,5);
+    r2.get_data(5,6);
+    cout<<"Before Increment"<<endl;
+    if(r1>r2)
+        cout<<"r1 is bigger"<<endl;
+    else
+        cout<<"r2 is bigger"<<endl;
+    cout<<"After Increment"<<endl;
+    r1++;
+    if(r1==r2)
+        cout<<"Equal"<<endl;
+    else
+        cout<<"The bigger value is r2: "<<r2.area()<<endl;
 }
