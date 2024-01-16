@@ -1,0 +1,11 @@
+Name: sifat	Letter Per Minutes: 169	Score: 100
+Name: sifat	Letter Per Minutes: 56	Score: 100
+Name: sfhgjfvdxgsdgk	Letter Per Minutes: 192	Score: 100
+Name: sdlhjcvadsiu	Letter Per Minutes: 120	Score: 100
+Name: sdlhjcvadsiu	Letter Per Minutes: 151	Score: 100
+Name: s	Word Per Minutes: 50.00	Score: 80
+Name: sifat	Word Per Minutes: 50.00	Score: 80
+Name: s	Word Per Minutes: 43.00	Score: 100
+Name: sifat	Word Per Minutes: 21.00	Score: 100
+Name: MagPie	Word Per Minutes: 6.00	Score: 20
+Name: humayra	Word Per Minutes: 11.00	Score: 80

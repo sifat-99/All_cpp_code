@@ -16,7 +16,6 @@
 | It will take a paragraph as input and then it will show the typing speed of the user.   |
 | It will also show the accuracy of the user.                                             |
 |-----------------------------------------------------------------------------------------|
-
 */
 
 #include <bits/stdc++.h>
@@ -27,28 +26,28 @@ string name;
 char uname[30];
 FILE *fp;
 
-    const string textColorRed = "\x1B[31m";
-    const string textColorGreen = "\x1B[32m";
-    const string textColorReset = "\x1B[0m";
-    const string backgroundColorYellow = "\x1B[43m";
-    const string textColorBlue = "\x1B[34m";
-    const string textColorPurple = "\x1B[35m";
+const string textColorRed = "\x1B[31m";
+const string textColorGreen = "\x1B[32m";
+const string textColorReset = "\x1B[0m";
+const string backgroundColorYellow = "\x1B[43m";
+const string textColorBlue = "\x1B[34m";
+const string textColorPurple = "\x1B[35m";
 
 void heading();
-    void mainMenu();
-        void delay(unsigned int microseconds);
-            void clearScreen();
-                void extras();
-                    void Speed_Test();
-                        void calculation();
-                            void helpSection();
+void mainMenu();
+void delay(unsigned int microseconds);
+void clearScreen();
+void extras();
+void Speed_Test();
+void calculation();
+void helpSection();
 
 int main()
 {
 
     heading();
-            mainMenu();
-                extras();
+    mainMenu();
+    extras();
 
     getchar();
     return 0;
@@ -56,9 +55,9 @@ int main()
 void heading()
 {
     clearScreen();
-    string massage = "💻 💻 💻 Welcome To Typing Speed Tester 💻 💻 💻";
+    string massage = " Welcome To Typing Speed Tester ";
     cout << "\n\n\t\t\t\t\t\t";
-    cout<<textColorGreen;
+    cout << textColorGreen;
     printf("\x1B[1m");
     printf("\x1B[4m");
     for (size_t i = 0; i < massage.length(); i++)
@@ -69,7 +68,7 @@ void heading()
     }
     printf("\x1B[0m");
     printf("\x1B[0m");
-    cout<<textColorReset;
+    cout << textColorReset;
     cout << endl
          << endl
          << endl
@@ -84,31 +83,36 @@ void heading()
     }
 
     cin >> uname;
-    cout << endl;
-    cout << "Hi " << uname << ","
-         << " Welcome to Typing Speed Tester" << endl
+    cout << endl
+         << endl
+         << endl
          << endl;
 }
 void mainMenu()
 {
     clearScreen();
 
+    cout << endl;
+    cout << "Hi " << uname << ","
+         << " Welcome to Typing Speed Tester" << endl
+         << endl;
+
     int choice;
 
     string c_massage = "Enter Your Choice : ";
     cout << "                                                            "
-         << " MenuList" << endl;
+         << " Menu List" << endl;
     cout << "                                                         ________________" << endl
          << endl;
-         cout<<textColorGreen;
+    cout << textColorGreen;
     cout << "                                                          1. Test Speed" << endl;
-    cout<<textColorBlue;
+    cout << textColorBlue;
     cout << "                                                          2. User Record\n";
-    cout<<textColorGreen;
+    cout << textColorGreen;
     cout << "                                                          3. Help\n";
-    cout<<textColorRed;
+    cout << textColorRed;
     cout << "                                                          4. Exit\n\n\n";
-    cout<<textColorReset;
+    cout << textColorReset;
     for (size_t i = 0; i < c_massage.length(); i++)
     {
         cout << c_massage[i];
@@ -121,7 +125,7 @@ void mainMenu()
 
     if (choice == 1)
     {
-        extras();
+        // extras();
         fflush(stdout);
         delay(300000);
         Speed_Test();
@@ -137,21 +141,21 @@ void mainMenu()
         printf("\n\nUser Name & Score\n\n");
         while (fgets(uname, 50, fp) != NULL)
         {
-            cout<<textColorPurple;
+            cout << textColorPurple;
             printf("\t%s", uname);
         }
-        cout<<textColorReset;
+        cout << textColorReset;
         fclose(fp);
 
         printf("\n\n\t");
         for (int i = 0; i < 30; i++)
         {
-            cout<<textColorPurple;
+            cout << textColorPurple;
             printf("%c", footer[i]);
             fflush(stdout);
             delay(20000);
         }
-        cout<<textColorReset;
+        cout << textColorReset;
         scanf("%d", &c_choice);
 
         if (c_choice == 0)
@@ -241,6 +245,7 @@ void Speed_Test()
     char line8[] = {"tHe qUiCk bRoWn fOx jUmPs oVeR tHe lAzY dOg."};
     char line9[] = {"tHe qUiCk bRoWn fOx jUmPs oVeR tHe lAzY dOg."};
     char line10[] = {"tHe qUiCk bRoWn fOx jUmPs oVeR tHe lAzY dOg."};
+
     for (int i = 0; i < 3; i++)
     {
         if (chk[i] == 0)
@@ -248,7 +253,7 @@ void Speed_Test()
             printf("\n\n");
 
             printf("\t\t\t");
-            cout<<textColorGreen;
+            cout << textColorGreen;
             printf("%s", line1);
         }
         else if (chk[i] == 1)
@@ -256,7 +261,7 @@ void Speed_Test()
             printf("\n\n");
 
             printf("\t\t\t");
-            cout<<textColorGreen;
+            cout << textColorGreen;
             printf("%s", line2);
         }
         else if (chk[i] == 2)
@@ -264,7 +269,7 @@ void Speed_Test()
             printf("\n\n");
 
             printf("\t\t\t");
-            cout<<textColorGreen;
+            cout << textColorGreen;
             printf("%s", line3);
         }
         else if (chk[i] == 3)
@@ -272,15 +277,16 @@ void Speed_Test()
             printf("\n\n");
 
             printf("\t\t\t");
-            cout<<textColorGreen;
+            cout << textColorGreen;
             printf("%s", line4);
         }
+
         else if (chk[i] == 4)
         {
             printf("\n\n");
 
             printf("\t\t\t");
-            cout<<textColorGreen;
+            cout << textColorGreen;
             printf("%s", line5);
         }
         else if (chk[i] == 5)
@@ -288,7 +294,7 @@ void Speed_Test()
             printf("\n\n");
 
             printf("\t\t\t");
-            cout<<textColorGreen;
+            cout << textColorGreen;
             printf("%s", line6);
         }
         else if (chk[i] == 6)
@@ -296,7 +302,7 @@ void Speed_Test()
             printf("\n\n");
 
             printf("\t\t\t");
-            cout<<textColorGreen;
+            cout << textColorGreen;
             printf("%s", line7);
         }
         else if (chk[i] == 7)
@@ -304,7 +310,7 @@ void Speed_Test()
             printf("\n\n");
 
             printf("\t\t\t");
-            cout<<textColorGreen;
+            cout << textColorGreen;
             printf("%s", line8);
         }
         else if (chk[i] == 8)
@@ -312,7 +318,7 @@ void Speed_Test()
             printf("\n\n");
 
             printf("\t\t\t");
-            cout<<textColorGreen;
+            cout << textColorGreen;
             printf("%s", line9);
         }
         else if (chk[i] == 9)
@@ -320,15 +326,15 @@ void Speed_Test()
             printf("\n\n");
 
             printf("\t\t\t");
-            cout<<textColorGreen;
+            cout << textColorGreen;
             printf("%s", line10);
             fflush(stdout);
         }
     }
-    cout<<textColorReset;
+    cout << textColorReset;
 
     // printf("\nType Here..\n\n");
-    cout<<textColorRed;
+    cout << textColorRed;
     string TypeCommand = "\nType Here..\n\n\n\n";
     for (size_t i = 0; i < TypeCommand.length(); i++)
     {
@@ -336,13 +342,13 @@ void Speed_Test()
         fflush(stdout);
         delay(50000);
     }
-    cout<<textColorReset;
+    cout << textColorReset;
 
     char testL1[32];
     char testL2[32];
     char testL3[32];
     // cout<<backgroundColorYellow;
-    cout<<textColorPurple;
+    cout << textColorPurple;
     if (chk[0] == 0)
     {
         fflush(stdin);
@@ -675,7 +681,7 @@ void Speed_Test()
         }
     }
 
-    cout<<textColorReset;
+    cout << textColorReset;
     end = time(NULL);
     duration = difftime(end, start);
 
@@ -685,7 +691,7 @@ void Speed_Test()
 void calculation()
 {
     int total_words_in_lines = 10 * 16;
-    int total_letters_in_lines = 48 * 10; // 48 letters in each line, 10 lines in total
+    int total_letters_in_lines = 48 * 10;
     int average_letters_per_word = total_letters_in_lines / total_words_in_lines;
     double percent, right;
     int LPM, a_choice;
@@ -727,75 +733,74 @@ void calculation()
     char r_massage[] = {" Here is your Result: "};
 
     printf("\n\n\t\t");
-    cout<<"🥳 🥳 ";
+    // cout<<"🥳 🥳 ";
     for (int i = 0; i < 4; i++)
     {
-        cout<<textColorBlue;
+        cout << textColorBlue;
         printf("%c", s_massage[i]);
         fflush(stdout);
         delay(100000);
     }
-    cout<<textColorReset;
+    cout << textColorReset;
     printf("\x1B[1m");
     for (size_t i = 0; i < strlen(uname); i++)
     {
-        cout<<textColorGreen;
+        cout << textColorGreen;
         printf("%c", uname[i]);
         fflush(stdout);
         delay(100000);
     }
     printf("\x1B[0m");
-    cout<<textColorReset;
+    cout << textColorReset;
     for (int i = 0; i < 22; i++)
     {
-        cout<<textColorBlue;
+        cout << textColorBlue;
         printf("%c", r_massage[i]);
         fflush(stdout);
         delay(100000);
     }
-    cout<<"🥳 🥳 ";
-    cout<<textColorReset;
-    cout<<textColorGreen;
-    // printf("\n\n\tPercentage Of Right is  : %.2lf%c", percent, s_ch);
-    // printf("\n\tLetter Per Minute is    : %d", LPM);
-    // printf("\n\tTotal Score of Yours is : %d\n", score);
-     printf("\n\tWord Per Minute is      : %.2lf", WPM);
+    // cout<<"🥳 🥳 ";
+    cout << textColorReset;
+    cout << textColorGreen;
+    printf("\n\tWord Per Minute is      : %.2lf", WPM);
     printf("\n\n\tPercentage Of Right is  : %.2lf%c", percent, s_ch);
     printf("\n\tTotal Score of Yours is : %d\n", score);
-    cout<<textColorReset;
+    cout << textColorReset;
     fp = fopen("score.txt", "a");
-    fprintf(fp, "Name: %s\tLetter Per Minutes: %d\tScore: %d\n", uname, LPM, score);
+    fprintf(fp, "Name: %s\tWord Per Minutes: %.2lf\tScore: %d\n", uname, WPM, score);
     fclose(fp);
 
-    char footer[] = {"If Test Again Press 1If go to Main Menu Press 2Enter Your Choice :"};
+    string footer1 = "1. Test Again  ";
+    string footer2 = "2. Return Menu List ";
+    string footer3 = "Enter Your Choice :";
     printf("\n\n\t");
-    cout<<textColorGreen;
-    for (int i = 0; i < 21; i++)
+    cout << textColorGreen;
+    for (size_t i = 0; i < footer1.length(); i++)
     {
-        printf("%c", footer[i]);
+        printf("%c", footer1[i]);
         fflush(stdout);
         delay(20000);
     }
     printf("\n\t");
-    cout<<textColorReset;
-    cout<<textColorRed;
-    for (int i = 21; i < 47; i++)
+    cout << textColorReset;
+    cout << textColorRed;
+    for (size_t i = 0; i < footer2.length(); i++)
     {
-        printf("%c", footer[i]);
+        printf("%c", footer2[i]);
         fflush(stdout);
         delay(20000);
     }
     printf("\n\n\t");
-    cout<<textColorReset;
-    cout<<textColorPurple;
-    for (int i = 47; i < 66; i++)
+    cout << textColorReset;
+    cout << textColorPurple;
+    for (size_t i = 0; i < footer3.length(); i++)
     {
-        printf("%c", footer[i]);
+        printf("%c", footer3[i]);
         fflush(stdout);
         delay(20000);
     }
-    cout<<textColorReset;
-    cout<<textColorPurple;
+    cout << textColorReset;
+    cout << textColorPurple;
     scanf("%d", &a_choice);
     if (a_choice == 1)
     {
@@ -805,7 +810,7 @@ void calculation()
 
     else if (a_choice == 2)
         mainMenu();
-        cout<<textColorReset;
+    cout << textColorReset;
 }
 void delay(unsigned int microseconds)
 {
@@ -818,30 +823,28 @@ void clearScreen()
 void helpSection()
 {
     int c_choice;
-    char footer[] = {"Press 0 For Go To Main Menu : "};
-    string HelpMessage = "\n\n * If you want to test your speed test, this is the best place for you.\n\n * If you want to test at first you need to to Input the value of 1, 1 is the function which takes you to the test page \n\n   where you can type some letter and test your LPM(Letter Per Minutes),  and accuracy as well as score \n\n * If you want more information you can contact us: \n\n\n \t\t\t\tMobile: 01521788920,\n\n\t\t\t\t\tEmail:  \n\n\t\t\t\tSifat: mdabdurrahmansifat@gmail.com\n\n\t\t\t\tSajid: sajkhan0098@gmail.com\n\n\t\t\t\tMithun: mhmmithun1@gmail.com\n\n\t\t\t\tShahriar: shahriarc224@gmail.com\n\n\t\t\t\tMehedi: mahdialmahmud248@gmail.com";
+    string footer = "Press 0 For Go To Main Menu : ";
+    string HelpMessage = "\n\n * If you want to test your typing speed, this is the best place for you.\n\n * If you want to test at first you need to input the value of 1, 1 is the function which takes you to the test page \n\n where you can type some letter and test your LPM(Letter Per Minutes), and accuracy as well as score \n\n * If you want more information you can contact us: \n\n\n\t\t\t\t\tEmail:  \n\n\t\t\t\tsupport.magpie@hotmail.co\n\n\t\t\t\t";
 
     for (size_t i = 0; i < HelpMessage.length(); i++)
     {
-        cout<<textColorGreen;
+        cout << textColorPurple;
         cout << HelpMessage[i];
         fflush(stdout);
         delay(20000);
     }
-    cout<<textColorReset;
+    cout << textColorReset;
     printf("\n\n\t");
-        for (int i = 0; i < 30; i++)
-        {
-            cout<<textColorPurple;
-            printf("%c", footer[i]);
-            fflush(stdout);
-            delay(20000);
-        }
-        cout<<textColorReset;
-        scanf("%d", &c_choice);
+    for (size_t i = 0; i < footer.length(); i++)
+    {
+        cout << textColorGreen;
+        printf("%c", footer[i]);
+        fflush(stdout);
+        delay(20000);
+    }
+    cout << textColorReset;
+    scanf("%d", &c_choice);
 
-        if (c_choice == 0)
-            mainMenu();
-
-
+    if (c_choice == 0)
+        mainMenu();
 }
