@@ -99,3 +99,71 @@ int main() {
 
     return 0;
 }
+
+
+
+
+// int main()
+// {
+//     string input;
+//     getline(cin, input);
+//     string toFind;
+//     cout << "Enter the string to find" << endl;
+//     getline(cin, toFind);
+//     size_t index = 0;
+//     size_t found = 0;
+//     transform(input.begin(), input.end(), input.begin(), ::tolower);
+//     transform(toFind.begin(), toFind.end(), toFind.begin(), ::tolower);
+//     for (size_t i = 0; i < toFind.length(); i++)
+//     {
+//         char ch = toFind[i];
+//         index = input.find(ch, index);
+//         if (index == string::npos && ch != ' ')
+//         {
+//             if (ch != ' ')
+//             {
+//                 found++;
+//             }
+//         }
+//         index++;
+//     }
+//     if ((index - toFind.length()) <= input.length())
+//     {
+//         cout << (index - toFind.length()+found) << endl;
+//     }
+//     else
+//     {
+//         cout <<-1<< endl;
+//     }
+// }
+
+
+
+// INDEX(string text, string pattern):
+//     for i = 0 to i < lengthText
+//     {
+//         set flag to true
+//         for j = 0 to lengthPattern
+//         {
+//             if text[i + j] == pattern[j]
+//                 then continue
+//             else
+//                 set flag to false
+//                 break
+//         }
+//         if flag is false
+//             then continue
+//         else
+//             return i
+//     }
+//     //So we have traversed the whole text but did not find the pattern
+//     if i has reached the end of the text (i==lengthText)
+//         return -1
+
+
+// MAIN():
+//     getline(cin, t)
+//     getline(cin, p)
+//     print INDEX(t, p)
+
+
