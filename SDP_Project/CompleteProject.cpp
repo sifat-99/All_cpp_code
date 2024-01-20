@@ -16,7 +16,8 @@
 | It will take a paragraph as input and then it will show the typing speed of the user.   |
 | It will also show the accuracy of the user.                                             |
 |-----------------------------------------------------------------------------------------|
-*/
+*/ 
+// The Project we build, Its very Important
 
 #include <bits/stdc++.h>
 #include <unistd.h>
