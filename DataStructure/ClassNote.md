@@ -101,3 +101,73 @@ Length: Length of the substring.
     - String s1 = "Hello";
     - String s2 = "World";
     - String s3 = s1 + s2; // HelloWorld
+
+
+
+
+#2nd pattern
+
+p = "aabaa"
+t = "aaabacaabaabca"
+
+# maxLength = L(t)-L(p)+1
+MaxLength = 14-5+1 = 10
+
+Q0 = ∑
+Q1 = a
+Q2 = aa
+Q3 = aab
+Q4 = aaba
+p/Q5 = aabaa 
+
+
+| State | a | b |
+|-------|---|---|
+| Q0    | Q1| Q0|
+| Q1    | Q2| Q0|
+| Q2    | Q2| Q3|
+| Q3    | Q4| Q0|
+| Q4    | p | Q0|
+|-------|---|---|
+
+
+
+######
+
+# Automata Circuit
+
+| State | Input | Next State |
+|-------|-------|------------|
+| Q0    | a     | Q1         |
+| Q0    | b     | Q0         |
+| Q1    | a     | Q2         |
+| Q1    | b     | Q0         |
+| Q2    | a     | Q3         |
+| Q2    | b     | Q2         |
+| Q3    | a     | Q0         |
+| Q3    | b     | Q4         |
+| Q4    | a     | Q0         |
+| Q4    | b     | Q0         |
+| Q5    | a     | Q0         |
+| Q5    | b     | Q0         |
+
+
+
+--------------------------------------------------------------------
+| t     |  | a | a | a | b | a | c | a | a | b | a | a | b | c | a |
+--------------------------------------------------------------------
+|state  | 0| 1 | 2 | 2 | 3 | 4 | 0 | 1 | 2 | 3 | 4 | 5 |   |   |   |
+--------------------------------------------------------------------
+                                                    k = 11
+
+
+# INDEX = k - p + 1
+
+INDEX = 11 - 5 + 1 = 7
+
+
+INDEX = (t,p) = 7
+
+
+
+
