@@ -259,3 +259,132 @@ int main() {
 
     return 0;
 }
+
+
+# Selection Sort
+
+Selection sort is a simple sorting algorithm. This sorting algorithm is an in-place comparison-based algorithm in which the list is divided into two parts, the sorted part at the left end and the unsorted part at the right end. Initially, the sorted part is empty and the unsorted part is the entire list.
+
+The smallest element is selected from the unsorted array and swapped with the leftmost element, and that element becomes a part of the sorted array. This process continues moving unsorted array boundary by one element to the right.
+
+This algorithm is not suitable for large data sets as its average and worst-case complexities are of Ο(n2), where n is the number of items.
+
+## Example
+
+Let's say we have an array of numbers: [5, 3, 8, 4, 2]
+
+1. Find the smallest element in the array and swap it with the first element.
+
+    [5, 3, 8, 4, 2] -> [2, 3, 8, 4, 5]
+
+2. Now, find the smallest element in the remaining array (excluding the first element) and swap it with the second element.
+
+    [2, 3, 8, 4, 5] -> [2, 3, 8, 4, 5]
+
+3. Now, find the smallest element in the remaining array (excluding the first two elements) and swap it with the third element.
+
+    [2, 3, 8, 4, 5] -> [2, 3, 4, 8, 5]
+
+4. Now, find the smallest element in the remaining array (excluding the first three elements) and swap it with the fourth element.
+
+    [2, 3, 4, 8, 5] -> [2, 3, 4, 5, 8]
+
+5. Now, find the smallest element in the remaining array (excluding the first four elements) and swap it with the fifth element.
+
+    [2, 3, 4, 5, 8] -> [2, 3, 4, 5, 8]
+
+The sorted array is: [2, 3, 4, 5, 8]
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void selectionSort(vector<int>& arr) {
+    int n = arr.size();
+    for (int i = 0; i < n - 1; i++) {
+        int minIndex = i;
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+        swap(arr[i], arr[minIndex]);
+    }
+}
+
+int main() {
+    vector<int> arr = {5, 3, 8, 4, 2};
+
+    selectionSort(arr);
+
+    cout << "Sorted array: ";
+    for (int num : arr) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+
+
+## Example
+
+Let's say we have an array of numbers: [7,3,5,11,8,2]
+
+The sorted array is: [2, 3, 4, 5, 8]
+
+The sorted array is: [2, 3, 5, 7, 8]
+
+
+
+# Insertion Sort
+
+Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.
+
+Algorithm
+
+To sort an array of size n in ascending order:
+
+1. Iterate from arr[1] to arr[n] over the array.
+
+2. Compare the current element (key) to its predecessor.
+
+3. If the key element is smaller than its predecessor, compare it to the elements before. Move the greater elements one position up to make space for the swapped element.
+
+## Example
+
+Let's say we have an array of numbers: [5, 3, 8, 4, 2]
+
+1. We start with the second element of the array and compare it with the first element. If the second element is smaller than the first element, we swap them.
+
+    [5, 3, 8, 4, 2] -> [3, 5, 8, 4, 2]
+
+2. Now, we compare the third element with the second element and swap them if they are not in order.
+
+    [3, 5, 8, 4, 2] -> [3, 5, 8, 4, 2]
+
+3. Now, we compare the fourth element with the third element and swap them if they are not in order.
+
+    [3, 5, 8, 4, 2] -> [3, 5, 4, 8, 2]
+
+4. Now, we compare the fifth element with the fourth element and swap them if they are not in order.
+
+    [3, 5, 4, 8, 2] -> [3, 5, 4, 2, 8]
+
+5. Now, we compare the fifth element with the fourth element and swap them if they are not in order.
+
+    [3, 5, 4, 2, 8] -> [3, 4, 5, 2, 8]
+
+6. Now, we compare the fifth element with the fourth element and swap them if they are not in order.
+
+    [3, 4, 5, 2, 8] -> [3, 4, 2, 5, 8]
+
+7. Now, we compare the fifth element with the fourth element and swap them if they are not in order.
+
+    [3, 4, 2, 5, 8] -> [3, 2, 4, 5, 8]  
+
+8. Now, we compare the fifth element with the fourth element and swap them if they are not in order.
+
+    [3, 2, 4, 5, 8] -> [2, 3, 4, 5, 8]
+
+The sorted array is: [2, 3, 4, 5, 8]
+
