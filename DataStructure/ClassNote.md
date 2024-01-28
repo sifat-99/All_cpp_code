@@ -170,4 +170,92 @@ INDEX = (t,p) = 7
 
 
 
+# Bubble Sort
 
+Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.
+
+## Example
+
+Let's say we have an array of numbers: [5, 3, 8, 4, 2]
+
+1. Start from the first element, compare the current element with the next element. If the current element is greater than the next element, swap them.
+2. Move to the next element and repeat the process until the last element.
+3. Repeat the entire process for the rest of the elements until the array is sorted.
+
+After the first pass, the largest number will have bubbled up to the end of the array. After the second pass, the second largest number will be in the second last position. This process continues until the array is sorted.
+
+The sorted array is: [2, 3, 4, 5, 8]
+
+# 1st pass
+    
+    [5, 3, 8, 4, 2] -> [3, 5, 8, 4, 2] -> [3, 5, 8, 4, 2] -> [3, 5, 4, 8, 2] -> [3, 5, 4, 2, 8]
+
+# 2nd pass
+
+    [3, 5, 4, 2, 8] -> [3, 4, 5, 2, 8] -> [3, 4, 2, 5, 8]
+
+# 3rd pass
+
+    [3, 4, 2, 5, 8] -> [3, 2, 4, 5, 8]
+
+# 4th pass
+
+    [3, 2, 4, 5, 8] -> [2, 3, 4, 5, 8]
+
+# 5th pass
+
+    [2, 3, 4, 5, 8] -> [2, 3, 4, 5, 8]
+
+give me the pass for= [8,5,7,3]
+
+# 1st pass
+
+    [8, 5, 7, 3]
+    [5, 8, 7, 3]
+    [5, 7, 8, 3]
+    [5, 7, 3, 8]
+
+# 2nd pass
+
+    [5, 7, 3, 8]
+    [5, 3, 7, 8]
+    [5, 3, 7, 8]
+
+# 3rd pass
+
+    [5, 3, 7, 8] 
+    [3, 5, 7, 8]
+
+# 4th pass
+
+    [3, 5, 7, 8]
+    [3, 5, 7, 8]
+
+
+#include<bits/stdc++>
+using namespace std;
+
+void bubbleSort(vector<int>& arr) {
+    int n = arr.size();
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                swap(arr[j], arr[j + 1]);
+            }
+        }
+    }
+}
+
+int main() {
+    vector<int> arr = {8, 5, 7, 3};
+
+    bubbleSort(arr);
+
+    cout << "Sorted array: ";
+    for (int num : arr) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
