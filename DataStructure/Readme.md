@@ -427,8 +427,51 @@ location of an element:
 
 ## 2D array
 
+arr(5:10, 5:10)
+
+
+    | c1    | c2    |
+    |-------|-------|
+ r1 |  1,1  |  1,2  |
+ r2 |  2,1  |  2,2  |
+ r3 |  3,1  |  3,2  |
+ r4 |  4,1  |  4,2  |
+
+
+.   |------|        .   |------|
+    |  101 |            |  101 |
+r1: |------|        c1: |------|
+    |  105 |            |  203 |
+    |------|            |------|
+                        |  309 |
+                        |------|
+                       
+
+.   |------|        .   |------|
+    |  203 |            |  105 |
+r2: |------|        c2: |------|
+    |  201 |            |  201 |
+    |------|            |------|
+                        |  411 |
+                        |------|
+
+
+.   |------|
+    |  309 |
+r3: |------|
+    |  411 |
+    |------|
 
 
 
 
+# Row measure: The elements are stored row by row.
+    - Loc(arr[j][k]) = base + w((j-lowerBound)*n + (k-lowerBound))
 
+# Column measure: The elements are stored column by column.
+    - Loc(arr[j][k]) = base + w((k-lowerBound)*n + (j-lowerBound))
+
+
+# EXAMPLE 
+- Loc(Arr[3][1]) = 1004 + 4(2(3-1)+(1-1)) = 1004 + 4(4) = 1004 + 16 = 1020
+- Loc(Arr[3][1]) = 1004 + 4(3(1-1)+(3-1)) = 1004 + 4(2) = 1004 + 8 = 1012
