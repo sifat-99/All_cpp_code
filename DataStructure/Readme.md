@@ -404,7 +404,28 @@ if the array is arr(-5:10), the length will be = 10 - (-5) + 1 = 16
 
 
 location of an element: 
-# loc(k) = k - lowerBound
+# loc(k) = base + w(k - lowerBound)
+
+- w = size of the element
+- k = index of the element
+- lowerBound = lower bound of the array
+- base = base address of the array
+
+
+| Index | Element |
+|-------|---------|
+|   0   |    5    |
+|   1   |    3    |
+|   2   |    8    |
+|   3   |    4    |
+|   4   |    2    |
+
+
+
+## 2D array
+
+
+
 
 
 
