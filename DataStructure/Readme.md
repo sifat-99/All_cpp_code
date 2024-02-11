@@ -411,14 +411,17 @@ location of an element:
 - lowerBound = lower bound of the array
 - base = base address of the array
 
+| Index | Value | Location |
+|-------|-------|----------|
+|  190  |   6   |   2004   |
+|  191  |   7   |   2005   |
+|  192  |   8   |   2006   |
+|  193  |   9   |   2007   |
+|  194  |   10  |   2008   |
+|  195  |   11  |   2009   |
 
-| Index | Element |
-|-------|---------|
-|   0   |    5    |
-|   1   |    3    |
-|   2   |    8    |
-|   3   |    4    |
-|   4   |    2    |
+- LOC(arr(196)) = 1004 + 4(196-190) = 1004+24 = 1028
+ 
 
 
 
