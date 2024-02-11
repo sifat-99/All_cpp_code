@@ -1,7 +1,6 @@
-
 ## Data Structure: The logical or mathematical model of particular rganization of data.
 
-Data Structure: 
+Data Structure:
 
 ## 1. Primitive Data Structure or Simple Data Structure: The data structure which can store only one value at a time is called primitive data structure.
 
@@ -13,7 +12,7 @@ Data Structure:
         f. boolean
 
 ## 2. Non-Primitive Data Structure: The data structure which can store multiple values at a time is called non-primitive data structure.
-    
+
         a. Array / string
         b. graph
         c. tree
@@ -30,28 +29,23 @@ Data Structure:
 
         **Customer Salesman Linked list table**
 
-        | Customer    | Salesman   | 
+        | Customer    | Salesman   |
         |-------------|------------|
-        | A           | 0          | 
+        | A           | 0          |
         | B           | 1          |
-        | C           | 0          | 
-        | D           | 0          | 
-        | E           | 1          | 
+        | C           | 0          |
+        | D           | 0          |
+        | E           | 1          |
 
         **Salesman Table**
 
-        | Salesman    | 
+        | Salesman    |
         |-------------|
         | S           | --> A
         | R           | --> B
         | T           | --> E
 
-
-
-
 # 2D Array or Matrix
-
-
 
 Operation of Data Structure.
 
@@ -64,46 +58,35 @@ Operation of Data Structure.
 
 ## ADT / Abstract Data Type.
 
-
-
-
 ## String
+
 - Substring
 - Indexing
 - Concatenation
 - Length
 
-
 1. Substring: A part of string is called substring.
-    - String s = "Hello World";
-    - String s1 = s.substring(0, 5); // Hello
-    - String s2 = s.substring(6, 11); // World
-
+   - String s = "Hello World";
+   - String s1 = s.substring(0, 5); // Hello
+   - String s2 = s.substring(6, 11); // World
 
 SUBSTRING(String, index, length);
+
 <!-- Index will start from 1 -->
+
 SUBSTRING("Hello World", 5, 3) = "o W";
 SUBSTRING("The End", 4, 4) = " End";
-
-
 
 String: The String from which will get the substring.
 Initial: The position of the first character in the substring.
 Length: Length of the substring.
 
-
 2. Indexing: INDEX(text, pattern)
 
-
-
-
 3. Concatenation: The process of joining two or more strings together to create a new string is called concatenation.
-    - String s1 = "Hello";
-    - String s2 = "World";
-    - String s3 = s1 + s2; // HelloWorld
-
-
-
+   - String s1 = "Hello";
+   - String s2 = "World";
+   - String s3 = s1 + s2; // HelloWorld
 
 #2nd pattern
 
@@ -111,6 +94,7 @@ p = "aabaa"
 t = "aaabacaabaabca"
 
 # maxLength = L(t)-L(p)+1
+
 MaxLength = 14-5+1 = 10
 
 Q0 = ∑
@@ -118,26 +102,23 @@ Q1 = a
 Q2 = aa
 Q3 = aab
 Q4 = aaba
-p/Q5 = aabaa 
+p/Q5 = aabaa
 
-
-| State | a | b |
-|-------|---|---|
-| Q0    | Q1| Q0|
-| Q1    | Q2| Q0|
-| Q2    | Q2| Q3|
-| Q3    | Q4| Q0|
-| Q4    | p | Q0|
-|-------|---|---|
-
-
+| State   | a   | b   |
+| ------- | --- | --- |
+| Q0      | Q1  | Q0  |
+| Q1      | Q2  | Q0  |
+| Q2      | Q2  | Q3  |
+| Q3      | Q4  | Q0  |
+| Q4      | p   | Q0  |
+| ------- | --- | --- |
 
 ######
 
 # Automata Circuit
 
 | State | Input | Next State |
-|-------|-------|------------|
+| ----- | ----- | ---------- |
 | Q0    | a     | Q1         |
 | Q0    | b     | Q0         |
 | Q1    | a     | Q2         |
@@ -151,24 +132,19 @@ p/Q5 = aabaa
 | Q5    | a     | Q0         |
 | Q5    | b     | Q0         |
 
+---
 
+## | t | | a | a | a | b | a | c | a | a | b | a | a | b | c | a |
 
---------------------------------------------------------------------
-| t     |  | a | a | a | b | a | c | a | a | b | a | a | b | c | a |
---------------------------------------------------------------------
-|state  | 0| 1 | 2 | 2 | 3 | 4 | 0 | 1 | 2 | 3 | 4 | 5 |   |   |   |
---------------------------------------------------------------------
+## |state | 0| 1 | 2 | 2 | 3 | 4 | 0 | 1 | 2 | 3 | 4 | 5 | | | |
+
                                                     k = 11
-
 
 # INDEX = k - p + 1
 
 INDEX = 11 - 5 + 1 = 7
 
-
 INDEX = (t,p) = 7
-
-
 
 # Bubble Sort
 
@@ -187,7 +163,7 @@ After the first pass, the largest number will have bubbled up to the end of the 
 The sorted array is: [2, 3, 4, 5, 8]
 
 # 1st pass
-    
+
     [5, 3, 8, 4, 2] -> [3, 5, 8, 4, 2] -> [3, 5, 8, 4, 2] -> [3, 5, 4, 8, 2] -> [3, 5, 4, 2, 8]
 
 # 2nd pass
@@ -223,7 +199,7 @@ give me the pass for= [8,5,7,3]
 
 # 3rd pass
 
-    [5, 3, 7, 8] 
+    [5, 3, 7, 8]
     [3, 5, 7, 8]
 
 # 4th pass
@@ -231,23 +207,22 @@ give me the pass for= [8,5,7,3]
     [3, 5, 7, 8]
     [3, 5, 7, 8]
 
-
 #include<bits/stdc++>
 using namespace std;
 
 void bubbleSort(vector<int>& arr) {
-    int n = arr.size();
-    for (int i = 0; i < n - 1; i++) {
-        for (int j = 0; j < n - i - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                swap(arr[j], arr[j + 1]);
-            }
-        }
-    }
+int n = arr.size();
+for (int i = 0; i < n - 1; i++) {
+for (int j = 0; j < n - i - 1; j++) {
+if (arr[j] > arr[j + 1]) {
+swap(arr[j], arr[j + 1]);
+}
+}
+}
 }
 
 int main() {
-    vector<int> arr = {8, 5, 7, 3};
+vector<int> arr = {8, 5, 7, 3};
 
     bubbleSort(arr);
 
@@ -258,8 +233,8 @@ int main() {
     cout << endl;
 
     return 0;
-}
 
+}
 
 # Selection Sort
 
@@ -275,23 +250,23 @@ Let's say we have an array of numbers: [5, 3, 8, 4, 2]
 
 1. Find the smallest element in the array and swap it with the first element.
 
-    [5, 3, 8, 4, 2] -> [2, 3, 8, 4, 5]
+   [5, 3, 8, 4, 2] -> [2, 3, 8, 4, 5]
 
 2. Now, find the smallest element in the remaining array (excluding the first element) and swap it with the second element.
 
-    [2, 3, 8, 4, 5] -> [2, 3, 8, 4, 5]
+   [2, 3, 8, 4, 5] -> [2, 3, 8, 4, 5]
 
 3. Now, find the smallest element in the remaining array (excluding the first two elements) and swap it with the third element.
 
-    [2, 3, 8, 4, 5] -> [2, 3, 4, 8, 5]
+   [2, 3, 8, 4, 5] -> [2, 3, 4, 8, 5]
 
 4. Now, find the smallest element in the remaining array (excluding the first three elements) and swap it with the fourth element.
 
-    [2, 3, 4, 8, 5] -> [2, 3, 4, 5, 8]
+   [2, 3, 4, 8, 5] -> [2, 3, 4, 5, 8]
 
 5. Now, find the smallest element in the remaining array (excluding the first four elements) and swap it with the fifth element.
 
-    [2, 3, 4, 5, 8] -> [2, 3, 4, 5, 8]
+   [2, 3, 4, 5, 8] -> [2, 3, 4, 5, 8]
 
 The sorted array is: [2, 3, 4, 5, 8]
 
@@ -299,20 +274,20 @@ The sorted array is: [2, 3, 4, 5, 8]
 using namespace std;
 
 void selectionSort(vector<int>& arr) {
-    int n = arr.size();
-    for (int i = 0; i < n - 1; i++) {
-        int minIndex = i;
-        for (int j = i + 1; j < n; j++) {
-            if (arr[j] < arr[minIndex]) {
-                minIndex = j;
-            }
-        }
-        swap(arr[i], arr[minIndex]);
-    }
+int n = arr.size();
+for (int i = 0; i < n - 1; i++) {
+int minIndex = i;
+for (int j = i + 1; j < n; j++) {
+if (arr[j] < arr[minIndex]) {
+minIndex = j;
+}
+}
+swap(arr[i], arr[minIndex]);
+}
 }
 
 int main() {
-    vector<int> arr = {5, 3, 8, 4, 2};
+vector<int> arr = {5, 3, 8, 4, 2};
 
     selectionSort(arr);
 
@@ -323,8 +298,8 @@ int main() {
     cout << endl;
 
     return 0;
-}
 
+}
 
 ## Example
 
@@ -333,8 +308,6 @@ Let's say we have an array of numbers: [7,3,5,11,8,2]
 The sorted array is: [2, 3, 4, 5, 8]
 
 The sorted array is: [2, 3, 5, 7, 8]
-
-
 
 # Insertion Sort
 
@@ -356,49 +329,82 @@ Let's say we have an array of numbers: [5, 3, 8, 4, 2]
 
 1. We start with the second element of the array and compare it with the first element. If the second element is smaller than the first element, we swap them.
 
-    [5, 3, 8, 4, 2] -> [3, 5, 8, 4, 2]
+   [5, 3, 8, 4, 2] -> [3, 5, 8, 4, 2]
 
 2. Now, we compare the third element with the second element and swap them if they are not in order.
 
-    [3, 5, 8, 4, 2] -> [3, 5, 8, 4, 2]
+   [3, 5, 8, 4, 2] -> [3, 5, 8, 4, 2]
 
 3. Now, we compare the fourth element with the third element and swap them if they are not in order.
 
-    [3, 5, 8, 4, 2] -> [3, 5, 4, 8, 2]
+   [3, 5, 8, 4, 2] -> [3, 5, 4, 8, 2]
 
 4. Now, we compare the fifth element with the fourth element and swap them if they are not in order.
 
-    [3, 5, 4, 8, 2] -> [3, 5, 4, 2, 8]
+   [3, 5, 4, 8, 2] -> [3, 5, 4, 2, 8]
 
 5. Now, we compare the fifth element with the fourth element and swap them if they are not in order.
 
-    [3, 5, 4, 2, 8] -> [3, 4, 5, 2, 8]
+   [3, 5, 4, 2, 8] -> [3, 4, 5, 2, 8]
 
 6. Now, we compare the fifth element with the fourth element and swap them if they are not in order.
 
-    [3, 4, 5, 2, 8] -> [3, 4, 2, 5, 8]
+   [3, 4, 5, 2, 8] -> [3, 4, 2, 5, 8]
 
 7. Now, we compare the fifth element with the fourth element and swap them if they are not in order.
 
-    [3, 4, 2, 5, 8] -> [3, 2, 4, 5, 8]  
+   [3, 4, 2, 5, 8] -> [3, 2, 4, 5, 8]
 
 8. Now, we compare the fifth element with the fourth element and swap them if they are not in order.
 
-    [3, 2, 4, 5, 8] -> [2, 3, 4, 5, 8]
+   [3, 2, 4, 5, 8] -> [2, 3, 4, 5, 8]
 
 The sorted array is: [2, 3, 4, 5, 8]
 
-
-
 ## Radix sort
 
+---
 
-____________________________________________
-| 276 | 316 | 105 | 31 | 62 | 10 | 187 | 3 |
---------------------------------------------
+## | 276 | 316 | 105 | 31 | 62 | 10 | 187 | 3 |
 
 1st pass
 
     0     1     2    3    4    5    6     7
-____________________________________________
+
+---
+
+### Linked List
+
+A linked list is a linear data structure, in which the elements are not stored at contiguous memory locations. The elements in a linked list are linked using pointers.
+
+In simple words, a linked list consists of nodes where each node contains a data field and a reference(link) to the next node in the list.
+
+## Example
+
+Let's say we have a linked list with the following elements: a -> b -> c -> d -> e ->f
+
+------------------
+No | DATA | LINK |
+------------------
+
+
+# array representation 
+
+arr(5)
+
+<!-- It will start from index 0 or 1(for theory) -->
+
+arr(5:10)
+
+<!-- It will start from index no 5 -->
+
+# length = upperBound - lowerBound + 1
+
+if the array is arr(-5:10), the length will be = 10 - (-5) + 1 = 16
+
+
+location of an element: 
+# loc(k) = k - lowerBound
+
+
 
