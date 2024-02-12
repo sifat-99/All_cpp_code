@@ -482,12 +482,49 @@ arr(5:10, 5:10)
 
 
 # Row measure: The elements are stored row by row.
-    - Loc(arr[j][k]) = base + w((j-lowerBound)*n + (k-lowerBound))
+    - Loc(arr[j][k]) = base + w((j-lowerBound)*N + (k-lowerBound))  //N= length of column
+
+    - LOC(arr[j][k]) = Base(arr) + w[N(j-1)+(k-1)] //if lower bound not mentioned
+
+    - w and base will be mentioned in the question.
 
 # Column measure: The elements are stored column by column.
-    - Loc(arr[j][k]) = base + w((k-lowerBound)*n + (j-lowerBound))
+    - Loc(arr[j][k]) = base + w((k-lowerBound)*M + (j-lowerBound))    //M = length of row
+    - LOC(arr[j][k]) = base(arr)+ w(M(k-1) + (j-1))     //if lower bound not mentioned
+
+    - w and base will be mentioned in the question.
 
 
 # EXAMPLE 
 - Loc(Arr[3][1]) = 1004 + 4(2(3-1)+(1-1)) = 1004 + 4(4) = 1004 + 16 = 1020
 - Loc(Arr[3][1]) = 1004 + 4(3(1-1)+(3-1)) = 1004 + 4(2) = 1004 + 8 = 1012
+
+
+
+
+# 3D array
+
+
+
+A(a:b,c:d,e:f)
+
+l1= b-a+1
+l2 = d-c+1
+l3 = f-e+1
+
+LOC(A[i][j][k])
+
+E1 = I -lowerBound
+E2 = j- lowerBound
+E3 = k - lowerBound
+
+
+# Row measure
+
+    - LOC(A[i][j][k]) = Base(A) + w[(E1*L2 + E2)*l3 + E3]
+
+# Column measure
+
+    - LOC(A[i][j][k]) = Base(A) + w[(E3*L2 + E2)*l1 + E1]
+
+    
