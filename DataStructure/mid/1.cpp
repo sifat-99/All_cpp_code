@@ -3,7 +3,7 @@ using namespace std;
 
 bool check(string s)
 {
-    string t[] = {"btw", "brb", "n8", "rofl", "lol"};
+    string t[] = {"btw", "brb", "n8", "rofl", "lol"};  
 
     for (size_t i = 0; i < s.length(); ++i)
     {
@@ -15,7 +15,7 @@ bool check(string s)
     {
         for (size_t j = 0; j < t->length(); j++)
         {
-            for (size_t k = 0; k < t[j].length(); k++)
+            for (size_t k = 0; k < t[j].length(); k++)    
             {
                 if (s[i] == t[j][k])
                 {
@@ -26,7 +26,6 @@ bool check(string s)
         }
     }
 
-
     if(count>=2)
     {
         return true;
@@ -35,10 +34,6 @@ bool check(string s)
         cout<<count;
         return false;
     }
-
-
-
-
 }
 
 int main()
