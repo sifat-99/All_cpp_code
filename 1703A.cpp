@@ -27,7 +27,9 @@ int main() {
             cout<<"YES"<<endl;
         }
         else{
+            // output the result
             cout<<"NO"<<endl;
+
         }
     }
     return 0;
