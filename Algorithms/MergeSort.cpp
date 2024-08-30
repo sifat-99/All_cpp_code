@@ -1,49 +1,36 @@
-#include <iostream>
-
+#include <bits/stdc++.h>
 using namespace std;
-
 void merge(int arr[], int left, int mid, int right)
 {
   int sizeOfLeftSubArray = mid - left + 1;
   int sizeOfRightSubArray = right - mid;
 
-  int LeftArray[sizeOfLeftSubArray], RightArray[sizeOfRightSubArray];
+  int LeftArray[sizeOfLeftSubArray + 1];
+  int RightArray[sizeOfRightSubArray + 1];
 
   for (int i = 0; i < sizeOfLeftSubArray; i++)
     LeftArray[i] = arr[left + i];
   for (int j = 0; j < sizeOfRightSubArray; j++)
     RightArray[j] = arr[mid + 1 + j];
 
-  int i = 0, j = 0, k = left;
+  LeftArray[sizeOfLeftSubArray] = INT_MAX; 
+  RightArray[sizeOfRightSubArray] = INT_MAX;
 
-  while (i < sizeOfLeftSubArray && j < sizeOfRightSubArray)
-  {
-    if (LeftArray[i] <= RightArray[j])
-    {
-      arr[k] = LeftArray[i];
-      i++;
-    }
-    else
-    {
-      arr[k] = RightArray[j];
-      j++;
-    }
-    k++;
-  }
+  int i = 0, j = 0;
 
-  while (i < sizeOfLeftSubArray)
+for(int k = left; k <= right; k++)
+{
+  if(LeftArray[i] <= RightArray[j])
   {
     arr[k] = LeftArray[i];
     i++;
-    k++;
   }
-
-  while (j < sizeOfRightSubArray)
+  else
   {
     arr[k] = RightArray[j];
     j++;
-    k++;
   }
+}
 }
 
 void mergeSort(int arr[], int left, int right)
@@ -65,7 +52,7 @@ int main()
   cout << "Enter the Size of the array: ";
   cin >> size;
 
-  int arr[size];
+  int *arr = new int[size];
   cout << "Enter the elements: ";
   for (int i = 0; i < size; i++)
     cin >> arr[i];
@@ -76,6 +63,8 @@ int main()
   for (int i = 0; i < size; i++)
     cout << arr[i] << " ";
   cout << endl;
+
+  delete[] arr;
 
   return 0;
 }
