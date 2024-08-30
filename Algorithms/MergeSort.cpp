@@ -13,24 +13,24 @@ void merge(int arr[], int left, int mid, int right)
   for (int j = 0; j < sizeOfRightSubArray; j++)
     RightArray[j] = arr[mid + 1 + j];
 
-  LeftArray[sizeOfLeftSubArray] = INT_MAX; 
+  LeftArray[sizeOfLeftSubArray] = INT_MAX;
   RightArray[sizeOfRightSubArray] = INT_MAX;
 
   int i = 0, j = 0;
 
-for(int k = left; k <= right; k++)
-{
-  if(LeftArray[i] <= RightArray[j])
+  for (int k = left; k <= right; k++)
   {
-    arr[k] = LeftArray[i];
-    i++;
+    if (LeftArray[i] <= RightArray[j])
+    {
+      arr[k] = LeftArray[i];
+      i++;
+    }
+    else
+    {
+      arr[k] = RightArray[j];
+      j++;
+    }
   }
-  else
-  {
-    arr[k] = RightArray[j];
-    j++;
-  }
-}
 }
 
 void mergeSort(int arr[], int left, int right)
@@ -52,19 +52,18 @@ int main()
   cout << "Enter the Size of the array: ";
   cin >> size;
 
-  int *arr = new int[size];
+  int array[size];
   cout << "Enter the elements: ";
   for (int i = 0; i < size; i++)
-    cin >> arr[i];
+    cin >> array[i];
 
-  mergeSort(arr, 0, size - 1);
+  mergeSort(array, 0, size - 1);
 
   cout << "Sorted array: ";
   for (int i = 0; i < size; i++)
-    cout << arr[i] << " ";
+    cout << array[i] << " ";
   cout << endl;
 
-  delete[] arr;
 
   return 0;
 }
