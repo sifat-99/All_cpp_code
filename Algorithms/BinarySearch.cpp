@@ -1,47 +1,56 @@
-#include <iostream>
-#include <vector>
-
+#include <bits/stdc++.h>
 using namespace std;
-
-int binarySearch(const vector<int>& arr, int target) {
+int binarySearch(int Array[], int size, int target)
+{
   int left = 0;
-  int right = arr.size() - 1;
+  int right = size - 1;
 
-  while (left <= right) {
+  while (left <= right)
+  {
     int mid = left + (right - left) / 2;
 
-    if (arr[mid] == target) {
+    if (Array[mid] == target)
+    {
       return mid;
-    } else if (arr[mid] < target) {
+    }
+    else if (Array[mid] < target)
+    {
       left = mid + 1;
-    } else {
+    }
+    else
+    {
       right = mid - 1;
     }
   }
 
-  return -1; 
+  return -1;
 }
 
-int main() {
+int main()
+{
   int n;
-  cout << "Enter the size of the array: ";
+  cout << "Enter the Size of the array: ";
   cin >> n;
 
-  vector<int> arr(n);
+  int Array[n];
   cout << "Enter the elements of the array: ";
-  for (int i = 0; i < n; i++) {
-    cin >> arr[i];
+  for (int i = 0; i < n; i++)
+  {
+    cin >> Array[i];
   }
 
-  int target;
+  int targetValue;
   cout << "Enter the target element: ";
-  cin >> target;
+  cin >> targetValue;
 
-  int result = binarySearch(arr, target);
+  int result = binarySearch(Array, n, targetValue);
 
-  if (result != -1) {
-    cout << "Element found at index " << result << endl;
-  } else {
+  if (result != -1)
+  {
+    cout << "Element found at index " << result << " for code and for theory Index no: " << result + 1 << endl;
+  }
+  else
+  {
     cout << "Element not found" << endl;
   }
 

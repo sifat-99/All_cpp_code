@@ -1,11 +1,7 @@
-#include <iostream>
-#include <vector>
-
+#include <bits/stdc++.h>
 using namespace std;
-
-void insertionSort(vector<int> &arr)
+void insertionSort(int arr[], int n)
 {
-  int n = arr.size();
   for (int i = 1; i < n; ++i)
   {
     int key = arr[i];
@@ -22,20 +18,21 @@ void insertionSort(vector<int> &arr)
 int main()
 {
   int n;
-  cout << "Enter the number of elements: ";
+  cout << "Enter the Size of the array: ";
   cin >> n;
 
-  vector<int> arr(n);
+  int arr[n];
   cout << "Enter the elements: ";
   for (int i = 0; i < n; ++i)
   {
     cin >> arr[i];
   }
 
-  insertionSort(arr);
+  insertionSort(arr, n);
 
   cout << "Sorted array: ";
- for(int i = 0; i < n; ++i) {
+  for (int i = 0; i < n; ++i)
+  {
     cout << arr[i] << " ";
   }
   cout << endl;
