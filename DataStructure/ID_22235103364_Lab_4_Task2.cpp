@@ -1,9 +1,11 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
-int BinarySearch(int ar[], int x, int lb, int hb) {
+int BinarySearch(int ar[], int x, int lb, int hb)
+{
     int mid;
-    while (lb <= hb) {
+    while (lb <= hb)
+    {
         mid = lb + (hb - lb) / 2;
 
         if (ar[mid] == x)
@@ -21,14 +23,16 @@ int BinarySearch(int ar[], int x, int lb, int hb) {
     else
         return -1;
 }
-int main() {
+int main()
+{
     int n;
     cout << "Enter size: ";
     cin >> n;
 
     int ar[n];
     cout << "Enter elements: ";
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
+    {
         cin >> ar[i];
     }
 
