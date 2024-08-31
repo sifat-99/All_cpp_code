@@ -3,30 +3,30 @@
 using namespace std;
 void merge(int arr[], int left, int mid, int right)
 {
-  int sizeOfLeftSubArray = mid - left + 1;
-  int sizeOfRightSubArray = right - mid;
-  int LeftArray[sizeOfLeftSubArray + 1];
-  int RightArray[sizeOfRightSubArray + 1];
+  int LeftSize = mid - left + 1;
+  int RightSize = right - mid;
+  int Left[LeftSize + 1];
+  int Right[RightSize + 1];
 
-  for (int i = 0; i < sizeOfLeftSubArray; i++)
-    LeftArray[i] = arr[left + i];
-  for (int j = 0; j < sizeOfRightSubArray; j++)
-    RightArray[j] = arr[mid + 1 + j];
+  for (int i = 0; i < LeftSize; i++)
+    Left[i] = arr[left + i];
+  for (int j = 0; j < RightSize; j++)
+    Right[j] = arr[mid + 1 + j];
 
-  LeftArray[sizeOfLeftSubArray] = INT_MAX;
-  RightArray[sizeOfRightSubArray] = INT_MAX;
+  Left[LeftSize] = INT_MAX;
+  Right[RightSize] = INT_MAX;
 
   int i = 0, j = 0;
   for (int k = left; k <= right; k++)
   {
-    if (LeftArray[i] <= RightArray[j])
+    if (Left[i] <= Right[j])
     {
-      arr[k] = LeftArray[i];
+      arr[k] = Left[i];
       i++;
     }
     else
     {
-      arr[k] = RightArray[j];
+      arr[k] = Right[j];
       j++;
     }
   }
