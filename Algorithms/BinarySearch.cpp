@@ -1,3 +1,4 @@
+
 #include <bits/stdc++.h>
 using namespace std;
 int binarySearch(int Array[], int size, int target)
@@ -20,9 +21,7 @@ int binarySearch(int Array[], int size, int target)
     else
     {
       right = mid - 1;
-    }
-  }
-
+    }}
   return -1;
 }
 
@@ -31,14 +30,12 @@ int main()
   int n;
   cout << "Enter the Size of the array: ";
   cin >> n;
-
   int Array[n];
   cout << "Enter the elements of the array: ";
   for (int i = 0; i < n; i++)
   {
     cin >> Array[i];
   }
-
   int targetValue;
   cout << "Enter the target element: ";
   cin >> targetValue;
@@ -53,6 +50,4 @@ int main()
   {
     cout << "Element not found" << endl;
   }
-
-  return 0;
-}
+  return 0;}

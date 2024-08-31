@@ -14,28 +14,23 @@ void insertionSort(int arr[], int n)
     arr[j + 1] = key;
   }
 }
-
 int main()
 {
   int n;
   cout << "Enter the Size of the array: ";
   cin >> n;
-
   int arr[n];
   cout << "Enter the elements: ";
   for (int i = 0; i < n; ++i)
   {
     cin >> arr[i];
   }
-
   insertionSort(arr, n);
-
   cout << "Sorted array: ";
   for (int i = 0; i < n; ++i)
   {
     cout << arr[i] << " ";
   }
   cout << endl;
-
   return 0;
 }

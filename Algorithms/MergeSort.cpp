@@ -1,10 +1,10 @@
+
 #include <bits/stdc++.h>
 using namespace std;
 void merge(int arr[], int left, int mid, int right)
 {
   int sizeOfLeftSubArray = mid - left + 1;
   int sizeOfRightSubArray = right - mid;
-
   int LeftArray[sizeOfLeftSubArray + 1];
   int RightArray[sizeOfRightSubArray + 1];
 
@@ -17,7 +17,6 @@ void merge(int arr[], int left, int mid, int right)
   RightArray[sizeOfRightSubArray] = INT_MAX;
 
   int i = 0, j = 0;
-
   for (int k = left; k <= right; k++)
   {
     if (LeftArray[i] <= RightArray[j])
@@ -51,7 +50,6 @@ int main()
   int size;
   cout << "Enter the Size of the array: ";
   cin >> size;
-
   int array[size];
   cout << "Enter the elements: ";
   for (int i = 0; i < size; i++)
@@ -63,7 +61,10 @@ int main()
   for (int i = 0; i < size; i++)
     cout << array[i] << " ";
   cout << endl;
-
-
   return 0;
 }
+
+
+
+
+
