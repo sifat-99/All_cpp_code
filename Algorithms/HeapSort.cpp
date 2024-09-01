@@ -1,10 +1,10 @@
-#include<bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
-void HeapFy(int arr[], int n, int root) {
-  int largest = root; 
-  int left = 2 * root + 1; 
-  int right = 2 * root + 2; 
+void heapify(int arr[], int n, int root) {
+  int largest = root;
+  int left = 2 * root + 1;
+  int right = 2 * root + 2;
 
   if (left < n && arr[left] > arr[largest])
     largest = left;
@@ -15,20 +15,22 @@ void HeapFy(int arr[], int n, int root) {
   if (largest != root) {
     swap(arr[root], arr[largest]);
 
-    HeapFy(arr, n, largest);
+    heapify(arr, n, largest);
   }
 }
 
-
-void heapSort(int arr[],int n) {
-
+void buildHeap(int arr[], int n) {
   for (int i = n / 2 - 1; i >= 0; i--)
-    HeapFy(arr, n, i);
+    heapify(arr, n, i);
+}
+
+void heapSort(int arr[], int n) {
+  buildHeap(arr, n);
 
   for (int i = n - 1; i > 0; i--) {
     swap(arr[0], arr[i]);
 
-    HeapFy(arr, i, 0);
+    heapify(arr, i, 0);
   }
 }
 
@@ -37,8 +39,8 @@ int main() {
   cout << "Enter the Size: ";
   cin >> n;
   int arr[n];
-  for(int i=0;i<n;i++){
-    cin>>arr[i];
+  for (int i = 0; i < n; i++) {
+    cin >> arr[i];
   }
 
   cout << "Original array: ";
@@ -46,7 +48,7 @@ int main() {
     cout << arr[i] << " ";
   cout << endl;
 
-  heapSort(arr,n);
+  heapSort(arr, n);
 
   cout << "Sorted array: ";
   for (int i = 0; i < n; i++)
