@@ -1,45 +1,50 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-char sign_check(char pre_value)
+bool is_sign_operator(char c)
 {
-  return (
-      pre_value == '+' || pre_value == '-' || pre_value == '*' || pre_value == '/');
+  return (c == '+' || c == '-' || c == '*' || c == '/');
 }
 
 int main()
 {
-  // char pre_value = ' ';
   ifstream file("./INPUT.txt");
+  ofstream output_file("output.txt");
   string line;
-  FILE *f2 = fopen("output.txt", "w");
-  if (file.is_open())
+
+  if (file.is_open() && output_file.is_open())
   {
     while (getline(file, line))
     {
+      int number_count = 0;
 
       for (size_t i = 0; i < line.length(); i++)
       {
-        if (isnumber(line[i]))
+        if (isdigit(line[i]))
         {
-          cout << line[i] << endl;
+          output_file << line[i];
+          number_count++;
         }
-
+        else if (is_sign_operator(line[i]))
+        {
+          output_file << line[i];
+        }
         else if (!isspace(line[i]))
         {
-          putc(line[i], f2);
+          output_file << line[i];
         }
       }
-      putc('\n', f2);
+      cout << number_count << " ";
+      output_file << endl;
     }
+
     file.close();
+    output_file.close();
   }
   else
   {
     cout << "Unable to open file!" << endl;
   }
 
-  putc('\n', f2);
-
-  fclose(f2);
+  return 0;
 }
