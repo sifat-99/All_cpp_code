@@ -11,12 +11,13 @@ int main()
   ifstream file("./INPUT.txt");
   ofstream output_file("output.txt");
   string line;
+  int number_count = 0;
 
   if (file.is_open() && output_file.is_open())
   {
     while (getline(file, line))
     {
-      int number_count = 0;
+      
 
       for (size_t i = 0; i < line.length(); i++)
       {
@@ -34,12 +35,12 @@ int main()
           output_file << line[i];
         }
       }
-      cout << number_count << " ";
       output_file << endl;
     }
 
     file.close();
     output_file.close();
+    cout << "Number of digits: " << number_count << endl;
   }
   else
   {
