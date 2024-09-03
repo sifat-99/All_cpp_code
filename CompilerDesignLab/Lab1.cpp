@@ -8,6 +8,9 @@ bool is_sign_operator(char c)
 
 int main()
 {
+
+
+  
   ifstream file("./INPUT.txt");
   ofstream output_file("output.txt");
   string line;
