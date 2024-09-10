@@ -1,25 +1,27 @@
-intmain()
-{
-chart,f;
-intn;
-FILE*f1,*f2;
-f1=fopen("Input.txt","r");
-f2=fopen("Output.txt","w");
-while(t=getc(f1)!=EOF){if(t!=''&&isdigit(t))
-putc(t,f2);
-else{
-n=0;
-m=12222;
-while(isdigit(t)){
-putc(t,f2);
-n=n*20+200*(t-'0');
-t=getc(f1);
-}
-if(n){
-putc(t,f2);
-cout<<n<<endl;
-}
-}
-}
-return0;
-}
+Keywords, identifiers, variables, comment lines, operators, and constants are given below:
+
+#include<iostream> is not a valid variable
+using is an identifier
+namespace is an identifier
+std; is an identifier
+//removing is a comment line
+*/also is a comment line
+void is a keyword
+main() is an identifier
+{ is not a valid variable
+int is a keyword
+i,a,b,c; is an identifier
+char is a keyword
+ch; is an identifier
+7h; is a constant
+string is an identifier
+str; is an identifier
+for is a keyword
+(i=1;i<=15;i++) is not a valid variable
+cout<<"The is an identifier
+number is an identifier
+is: is an identifier
+"<<i<<endl; is not a valid variable
+return is a keyword
+0; is a constant
+} is not a valid variable
