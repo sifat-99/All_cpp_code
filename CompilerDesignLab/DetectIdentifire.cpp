@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
 
 int isKeyword(string s)
@@ -40,51 +40,54 @@ int isHeaderFile(string s)
 int main()
 {
   string st;
-  freopen("./INPUT.txt", "r", stdin);
-  freopen("./OUTPUT.txt", "w", stdout);
+  ifstream inputFile("./INPUT.txt");
+  ofstream outputFile("./OUTPUT.txt");
 
-  cout << "Keywords, identifiers, variables, comment lines, operators, and constants are given below:\n\n";
+  outputFile << "Keywords, identifiers, variables, comment lines, operators, and constants are given below:\n\n";
 
-  while (cin >> st)
+  while (inputFile >> st)
   {
     if (isKeyword(st))
     {
-      cout << st << " is a keyword\n";
+      outputFile << st << " is a keyword\n";
     }
     else if (isConstant(st))
     {
-      cout << st << " is a constant\n";
+      outputFile << st << " is a constant\n";
     }
     else if (isIdentifier(st))
     {
-      cout << st << " is an identifier\n";
+      outputFile << st << " is an identifier\n";
     }
     else if (isComment(st))
     {
-      cout << st << " is a comment line\n";
+      outputFile << st << " is a comment line\n";
       string temp;
-      getline(cin, temp);
+      getline(inputFile, temp);
     }
     else if (isOperator(st))
     {
-      cout << st << " is an operator\n";
+      outputFile << st << " is an operator\n";
     }
     else if (isHeaderFile(st))
     {
-      cout << st << " is a header file\n";
+      outputFile << st << " is a header file\n";
     }
     else
     {
       if (st == "main")
       {
-        cout << st << " is a main function\n";
+        outputFile << st << " is a main function\n";
       }
       else
       {
-        cout << st << " is a variable\n";
+        outputFile << st << " is a variable\n";
       }
     }
   }
+
+  inputFile.close();
+  outputFile.close();
 
   return 0;
 }
