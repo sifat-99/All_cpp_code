@@ -3,25 +3,26 @@ Keywords, identifiers, variables, comment lines, operators, and constants are gi
 #include<iostream> is a header file
 using is an identifier
 namespace is an identifier
-std; is an identifier
+std; is a variable
 //removing is a comment line
 */also is a comment line
 void is a keyword
-main() is an identifier
+main() is a variable
 { is a variable
 int is a keyword
-i,a,b,c; is an identifier
+i,a,b,c; is a variable
 char is a keyword
-ch; is an identifier
-7h; is a constant
+ch; is a variable
+7h; is a variable
 string is an identifier
-str; is an identifier
+str; is a variable
 for is a keyword
 (i=1;i<=15;i++) is a variable
-cout<<"The is an identifier
+cout<<"The is a variable
 number is an identifier
-is: is an identifier
+is: is a variable
 "<<i<<endl; is a variable
 return is a keyword
-0; is a constant
+0; is a variable
 } is a variable
+si@at is a variable

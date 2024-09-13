@@ -1,40 +1,61 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+#include <unordered_set>
 using namespace std;
 
-int isKeyword(string s)
+bool isKeyword(const string &s)
 {
-  return (s == "auto" || s == "int" || s == "char" || s == "long" ||
-          s == "float" || s == "double" || s == "struct" || s == "if" ||
-          s == "else" || s == "break" || s == "continue" || s == "while" ||
-          s == "do" || s == "for" || s == "return" || s == "signed" ||
-          s == "unsigned" || s == "default" || s == "goto" || s == "case" ||
-          s == "sizeof" || s == "short" || s == "switch" || s == "void" ||
-          s == "static" || s == "typedef");
+  const string keywords[] = {"auto", "int", "char", "long", "float", "double", "struct", "if", "else", "break", "continue", "while", "do", "for", "return", "signed", "unsigned", "default", "goto", "case", "sizeof", "short", "switch", "void", "static", "typedef"};
+  for (const string &keyword : keywords)
+  {
+    if (s == keyword)
+      return true;
+  }
+  return false;
 }
 
-int isIdentifier(string s)
+bool isIdentifier(const string &s)
 {
-  return (s[0] >= 'a' && s[0] <= 'z') || (s[0] >= 'A' && s[0] <= 'Z') || s[0] == '_';
+  if (s.empty() || !(isalpha(s[0]) || s[0] == '_'))
+    return false;
+  for (char c : s)
+  {
+    if (!isalnum(c) && c != '_')
+      return false;
+  }
+  return true;
 }
 
-int isConstant(string s)
+bool isConstant(const string &s)
 {
-  return (s[0] >= '0' && s[0] <= '9');
+  if (s.empty())
+    return false;
+  for (char c : s)
+  {
+    if (!isdigit(c))
+      return false;
+  }
+  return true;
 }
 
-int isComment(string s)
+bool isComment(const string &s)
 {
-  return ((s[0] == '/' && s[1] == '/') || (s[0] == '/' && s[1] == '*') || (s[0] == '*' && s[1] == '/') || (s[0] == '*' && s[1] == '*'));
+  return s.substr(0, 2) == "//" || s.substr(0, 2) == "/*" || s.substr(0, 2) == "*/";
 }
 
-int isOperator(string s)
+bool isOperator(const string &s)
 {
-  return (s == "+" || s == "-" || s == "*" || s == "/" || s == "%" || s == "++" || s == "--" || s == "==" || s == "!=" || s == ">" || s == "<" || s == ">=" || s == "<=" || s == "&&" || s == "||" || s == "!" || s == "&" || s == "|" || s == "^" || s == "~" || s == "<<" || s == ">>" || s == ">>>" || s == "+=" || s == "-=" || s == "*=" || s == "/=" || s == "%=" || s == "&=" || s == "|=" || s == "^=" || s == "<<=" || s == ">>=" || s == ">>>=");
+  const string operators[] = {"+", "-", "*", "/", "%", "++", "--", "==", "!=", ">", "<", ">=", "<=", "&&", "||", "!", "&", "|", "^", "~", "<<", ">>", ">>>", "+=", "-=", "*=", "/=", "%=", "&=", "|=", "^=", "<<=", ">>=", ">>>="};
+  for (const string &op : operators)
+  {
+    if (s == op)
+      return true;
+  }
+  return false;
 }
 
-int isHeaderFile(string s)
+bool isHeaderFile(const string &s)
 {
-  return (s == "#include" || s == "<bits/stdc++.h>" || s == "using" || s == "namespace" || s == "std" || s == "#include<iostream>" || s == "#include<fstream>");
+  return s.substr(0, 8) == "#include";
 }
 
 int main()
@@ -63,7 +84,7 @@ int main()
     {
       outputFile << st << " is a comment line\n";
       string temp;
-      getline(inputFile, temp);
+      getline(inputFile, temp); // Skip the rest of the comment line
     }
     else if (isOperator(st))
     {
