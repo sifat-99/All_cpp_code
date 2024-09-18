@@ -1,13 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
+
+
 int Partition(int arr[], int low, int high) {
-    int pivot = arr[low]; 
+    int pivotElement = arr[low]; 
     int i = low + 1;  
     int j = high;
     while (i <= j) {
-        while (arr[i] <= pivot) {
+        while (arr[i] <= pivotElement) {
             i++;}
-        while ( arr[j] > pivot) {
+        while ( arr[j] > pivotElement) {
             j--;
         }
         if (i < j) {
@@ -18,7 +20,7 @@ int Partition(int arr[], int low, int high) {
         }
     }
     arr[low] = arr[j];
-    arr[j] = pivot;
+    arr[j] = pivotElement;
     return j;
 }
 void QuickSort(int arr[], int low, int high) {
