@@ -16,7 +16,7 @@ int Partition(int arr[], int low, int high) {
             int temp = arr[i];
             arr[i] = arr[j];
             arr[j] = temp;
-            // transformation complete
+            // transformation complete for the code below
         }
     }
     arr[low] = arr[j];
