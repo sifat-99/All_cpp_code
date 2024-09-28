@@ -12,18 +12,22 @@ void mainMenu() {
     int choice;
     char c_message[] = {"\n\n\t\t\t\t\t\t\tEnter Your Choice : "};
     char *menuText = "\n\n\t\tMenu List... Select one of them..";
-    
+
+
+
+    // Print the menu text
+
     for (int i = 0; menuText[i] != '\0'; i++) {
         putchar(menuText[i]);
-        
+
         fflush(stdout);
-        
+
         usleep(100000);
     }
     for (int i = 0; i < 10; i++) {
         printf(".");
         fflush(stdout);
-        delay(100000); 
+        delay(100000);
     }
 
     for(int i=0; i<4; i++)
@@ -74,7 +78,7 @@ void mainMenu() {
         printf("\n\n\t");
         for (int i = 0; i < 30; i++) {
             printf("%c", footer[i]);
-            delay(100000); 
+            delay(100000);
         }
         scanf("%d", &c_choice);
 
