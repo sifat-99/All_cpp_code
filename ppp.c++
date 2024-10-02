@@ -12,6 +12,8 @@ public:
         minutes = 10;
         seconds = 10;
     }
+    // call the function timeToSecond
+    // friend class clock;
     friend class clock;
     friend void timeToSecond(times object);
 };
