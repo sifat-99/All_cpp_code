@@ -8,6 +8,7 @@ public:
     int hour, minutes, seconds;
     times()
     {
+        // default values
         hour = 10;
         minutes = 10;
         seconds = 10;
