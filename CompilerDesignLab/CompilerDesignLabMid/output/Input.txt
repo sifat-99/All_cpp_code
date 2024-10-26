@@ -1,0 +1,13 @@
+{
+    int a , t1 , t2 ;
+    t1=2; a = 1; a = 2; a = 3;
+    t2 = - ( a + t1 * 6 ) / ( a - t1 );
+    if t2 > 5
+    print(t2);
+    else {
+        int t3;
+        t3 = 99;
+        t2 = - 25;
+        print(- t1 + t2 * t3);
+    } endif
+}

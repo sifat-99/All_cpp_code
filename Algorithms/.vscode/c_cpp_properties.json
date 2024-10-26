@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/include",
+                "/usr/local/include",
+                "/Library/Developer/CommandLineTools/usr/include/c++/v1",
+                "/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include",
+                "/Library/Developer/CommandLineTools/usr/include",
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include",
+                "/usr/local/Cellar/gcc/10.2.0/include/c++/10.2.0" // Adjust this path based on your GCC installation
+            ],
+            "defines": [],
+            "macFrameworkPath": [
+                "/System/Library/Frameworks",
+                "/Library/Frameworks"
+            ],
+            "compilerPath": "/usr/local/bin/g++", // Adjust this path based on your GCC installation
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "macos-gcc-x64"
+        }
+    ],
+    "version": 4
+}

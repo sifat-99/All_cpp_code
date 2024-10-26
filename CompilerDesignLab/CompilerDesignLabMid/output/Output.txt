@@ -1,0 +1,4 @@
+Operators: =  , -  , +  , *  , /  , >
+Keywords: int , if , else , endif
+Variables: a , t1 , t2 , t3
+SpecialSymbols: { , ; ( ) }
