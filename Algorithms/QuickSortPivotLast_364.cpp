@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int Partition(int arr[], int low, int high) {
+/*int Partition(int arr[], int low, int high) {
     int pivot = arr[high];
     int i = low;
     for (int j = low; j < high; j++) {
@@ -30,7 +30,7 @@ void QuickSort(int arr[], int low, int high) {
 
 
 int main() {
-  
+
     int n;
     cout << "Enter the size: ";
     cin >> n;
@@ -49,4 +49,18 @@ int main() {
     cout << endl;
 
     return 0;
+}
+*/
+
+quick_sort(int a,0,n-1);
+int main()
+{
+    int n;
+    cin>>n;
+    int a[n];
+    for(int i=0;i<n;i++)
+        cin>>a[i];
+        quick_sort(a,0,n-1);
+    for(int i=0;i<n;i++)
+    cout<<a[i]<<" ";
 }

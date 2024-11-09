@@ -2,6 +2,8 @@
     "files.associations": {
         ".php_cs": "php",
         ".php_cs.dist": "php",
-        "set": "cpp"
+        "set": "cpp",
+        "vector": "cpp",
+        "ostream": "cpp"
     }
 }
