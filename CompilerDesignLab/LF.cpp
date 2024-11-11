@@ -3,13 +3,14 @@ using namespace std;
 
 void SplitTheString(string input)
 {
+    input.erase(remove(input.begin(), input.end(), ' '), input.end());
     vector<string> first;
     vector<string> second;
     vector<string> CommonPart;
-    vector<string> afterCommonPart;
-
+    vector<string> afterCommonPartFirst;
+    vector<string> afterCommonPartSecond;
     size_t i = 0;
-    while (i >= 0 && input[i] != '|')
+    while (i < input.size() && input[i] != '|')
     {
         first.push_back(string(1, input[i]));
         i++;
@@ -21,54 +22,68 @@ void SplitTheString(string input)
         i++;
     }
 
-    for (size_t i = 0; i < first.size(); i++)
-    {
-        for (size_t j = 0; j < second.size(); j++)
-        {
-            if (first[i] == second[j])
-            {
-                CommonPart.push_back(first[i]);
-            }
+    size_t minLength = min(first.size(), second.size());
+    size_t commonLength = 0;
 
+    for (size_t i = 0; i < minLength; i++)
+    {
+        if (first[i] == second[i])
+        {
+            CommonPart.push_back(first[i]);
+            commonLength++;
+        }
+        else
+        {
+            break;
         }
     }
 
-    for (size_t i = 0; i < first.size(); i++)
+    for (size_t i = commonLength; i < first.size(); i++)
     {
-        if (find(CommonPart.begin(), CommonPart.end(), first[i]) == CommonPart.end())
-        {
-            afterCommonPart.push_back(first[i]);
-        }
-
-        if(find(CommonPart.begin(), CommonPart.end(), second[i]) == CommonPart.end())
-        {
-            afterCommonPart.push_back(second[i]);
-        }
-
+        afterCommonPartFirst.push_back(first[i]);
     }
-    cout<<"A->";
-    for(size_t i=0; i<CommonPart.size(); i++)
+
+    for (size_t i = commonLength; i < second.size(); i++)
+    {
+        afterCommonPartSecond.push_back(second[i]);
+    }
+
+    cout << "A-> ";
+    for (size_t i = 0; i < CommonPart.size(); i++)
     {
         cout << CommonPart[i];
     }
-    cout<<"X"<<endl;
-    cout<<"X->";
-    for(size_t i=0; i<afterCommonPart.size(); i++)
+    cout << "A'" << endl;
+
+    cout << "A'-> ";
+    if (afterCommonPartFirst.empty())
     {
-        cout << afterCommonPart[i];
-        if(i%2==0)
+        cout << " # ";
+    }
+    else
+    {
+        for (size_t i = 0; i < afterCommonPartFirst.size(); i++)
         {
-            cout<<"|";
+            cout << afterCommonPartFirst[i];
         }
     }
-
-    cout<<endl;
-
+    cout << " | ";
+    if (afterCommonPartSecond.empty())
+    {
+        cout << " # ";
+    }
+    else
+    {
+        for (size_t i = 0; i < afterCommonPartSecond.size(); i++)
+        {
+            cout << afterCommonPartSecond[i];
+        }
+    }
+    cout << endl;
 }
 
 int main()
 {
-
     string input;
     getline(cin, input);
 
