@@ -10,6 +10,11 @@ void SplitTheString(string input)
     vector<string> afterCommonPartFirst;
     vector<string> afterCommonPartSecond;
     size_t i = 0;
+        // Question
+    // A->aBc|aBd
+    // A-> aB|aBc
+
+
     while (i < input.size() && input[i] != '|')
     {
         first.push_back(string(1, input[i]));

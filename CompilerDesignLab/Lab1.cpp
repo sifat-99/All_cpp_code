@@ -2,7 +2,7 @@
 using namespace std;
 
 bool is_sign_operator(char c)
-{
+{ 
     return (c == '+' || c == '-' || c == '*' || c == '/');
 }
 int main()

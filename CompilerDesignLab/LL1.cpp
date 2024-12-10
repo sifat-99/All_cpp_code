@@ -1,8 +1,6 @@
 #include <iostream>
 #include <cstring>
-
 #define MAX 100
-
 using namespace std;
 
 void displayStack(char stack[], int top) {
@@ -20,11 +18,11 @@ void displayInput(char input[], int pos) {
 int main() {
     char stack[MAX], input[MAX];
     int top = -1, pos = 0;
-    cout << "Enter the input string (ending with $): ";
+    cout << "Enter the input string (ending with $): ";   
     cin >> input;
 
-    stack[++top] = '$';
-    stack[++top] = 'A';
+    stack[++top] = '$'; // 0
+    stack[++top] = 'A'; // 1
 
     cout << "Stack\tInput\n";
     cout << "-----\t-----\n";
@@ -33,11 +31,11 @@ int main() {
         displayStack(stack, top);
         displayInput(input, pos);
 
-        char topSymbol = stack[top];
-        char currInput = input[pos];
-        if (topSymbol == currInput) {
-            top--;
-            pos++;
+        char topSymbol = stack[top]; // 0 = $
+        char currInput = input[pos]; // 4 = $
+        if (topSymbol == currInput) {  // $ == $
+            top--; // -1
+            pos++; // 5
         }
         else if (topSymbol == 'A' && currInput == 'a') {
             top--;
@@ -58,7 +56,7 @@ int main() {
             return 1;
         }
     }
-
+    // 6    =    5
     if (pos == strlen(input))
         cout << "Parsing successful!\n";
     else

@@ -21,6 +21,7 @@ bool isAccepted( string str, string pattern) {
     return false;
 }
 
+
 int main() {
     string input;
     cout << "Enter a string: ";
