@@ -33,4 +33,8 @@ void compare(area ob)
         area box(50, 200),
             box2(40, 50);
         box.compare(box2);
+        return 0;
+        //Close the program
+
+        
     }
