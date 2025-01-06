@@ -1,0 +1,42 @@
+# Created by Octave 9.2.0, Thu Aug 22 11:51:56 2024 +06 <sifat@MacBook-Pro.local>
+# name: ans
+# type: matrix
+# rows: 3
+# columns: 3
+ 0.73022993119911006 0.11977796598666679 0.83054465468363103
+ 0.099889501263859648 0.30961799077319174 0.89751544772982739
+ 0.2044089685090289 0.71597066299288925 0.21900945681884432
+
+
+# name: d
+# type: matrix
+# rows: 3
+# columns: 3
+ 5 6 3
+ 3 45 5
+ 32 2 3
+
+
+# name: s
+# type: matrix
+# rows: 2
+# columns: 2
+ 4 5
+ 7 8
+
+
+# name: v
+# type: matrix
+# rows: 3
+# columns: 3
+ 1 2 3
+ 4 5 6
+ 7 8 9
+
+
+# name: x
+# type: double_range
+# base, limit, increment
+0 5 0.10000000000000001
+
+

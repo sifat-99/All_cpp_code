@@ -1,0 +1,82 @@
+1.
+CREATE TABLE citizen(
+    citizen_id int PRIMARY KEY AUTO_INCREMENT,
+    citizen_name VARCHAR(100) NOT NULL,
+    Citizen_home VARCHAR(100),
+    age INT,
+    occupation VARCHAR(50),
+    Gender varchar(20),
+    salary INT(10),
+    CONSTRAINT age CHECK (age>18),
+    CONSTRAINT Gender CHECK (Where Gender='Male' OR Gender='Female')
+    );
+2.
+INSERT INTO CITIZEN (CITIZEN_NAME,CITIZEN_HOME,AGE,OCCUPATION,GENDER,SALARY) VALUES
+('Sifat', 'Dhaka', 17, 'Teacher', 'Male', 50000),
+('Pungta', 'Dhaka', 15, 'Service', 'Male', 60000),
+('Charm', 'Ctg', 10, 'Retired', 'Male', 10000);
+Error: #4025 - CONSTRAINT `age` failed for `lab6`.`citizen`
+
+3.
+
+Run
+
+4.
+CREATE TABLE customer (
+    CUSTOMER_ID INT AUTO_INCREMENT,
+    CUSTOMER_NAME VARCHAR(100),
+    CITIZEN_ID INT,
+    AGE INT,
+    OCCUPATION VARCHAR(100),
+    PRIMARY KEY (CUSTOMER_ID)
+);
+
+ALTER TABLE customer AUTO_INCREMENT = 1001;
+
+
+5.
+INSERT INTO customer(CUSTOMER_NAME,CITIZEN_ID,AGE,OCCUPATION)
+SELECT CITIZEN_NAME,CITIZEN_ID,AGE,OCCUPATION FROM citizen;
+
+6.
+CREATE VIEW Student_Customer AS
+SELECT * FROM customer
+WHERE occupation="Student";
+
+7.
+CREATE VIEW Male_Customers AS
+SELECT c.customer_id,c.customer_name,c.citizen_id,c.age,c.occupation FROM customer c
+JOIN Citizen CZ ON c.citizen_id=CZ.citizen_id
+Where CZ.Gender='Male';
+
+
+
+8.
+SELECT PD.product_id, PD.product_name FROM products PD
+JOIN order_details OD ON PD.PRODUCT_ID=OD.PRODUCT_ID
+JOIN orders O ON OD.ORDER_ID= O.ORDER_ID
+JOIN customer C ON O.CUSTOMER_ID=C.CUSTOMER_ID
+WHERE C.OCCUPATION='Student';
+
+9.
+SELECT PD.product_id, PD.product_name FROM products PD
+JOIN order_details OD ON PD.PRODUCT_ID=OD.PRODUCT_ID
+JOIN orders O ON OD.ORDER_ID= O.ORDER_ID
+JOIN customer C ON O.CUSTOMER_ID=C.CUSTOMER_ID
+JOIN citizen CZ ON C.CITIZEN_ID=CZ.citizen_id
+WHERE CZ.Gender='Male';
+
+10.
+CREATE VIEW Occupation_Order AS
+SELECT DISTINCT C.OCCUPATION, COUNT(*) FROM products PD
+JOIN order_details OD ON PD.PRODUCT_ID=OD.PRODUCT_ID
+JOIN orders O ON OD.ORDER_ID= O.ORDER_ID
+JOIN customer C ON O.CUSTOMER_ID=C.CUSTOMER_ID
+GROUP BY C.OCCUPATION;
+
+11.
+SELECT DISTINCT OD.PRODUCT_ID,PD.PRODUCT_NAME, COUNT(*) AS 'Sale' FROM products PD
+JOIN order_details OD ON PD.PRODUCT_ID=OD.PRODUCT_ID
+JOIN orders O ON OD.ORDER_ID= O.ORDER_ID
+JOIN customer C ON O.CUSTOMER_ID=C.CUSTOMER_ID
+GROUP BY OD.PRODUCT_ID;

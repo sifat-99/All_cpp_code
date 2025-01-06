@@ -1,0 +1,76 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{setspace}
+\usepackage[export]{adjustbox}
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+    \usepackage{apacite}
+\usepackage{ragged2e}
+
+\usepackage{tabularx}
+\usepackage{sectsty}
+
+
+\sectionfont{\fontsize{16}{16}\selectfont}
+\subsectionfont{\fontsize{14}{14}\selectfont}
+\subsubsectionfont{\fontsize{14}{14}\selectfont}
+\paragraphfont{\fontsize{12}{12}\selectfont}
+\subparagraphfont{\fontsize{12}{12}\selectfont}
+
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=blackhttps://www.overleaf.com/project/6543e1bac7e1fbe52138be39
+}
+
+\usepackage[a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\begin{document}
+\doublespacing
+\input{cover_page}
+\tableofcontents
+\thispagestyle{empty}
+\cleardoublepage 
+\pagenumbering{roman}
+\setcounter{page}{3}
+
+
+\input{Declaration}
+\addcontentsline{toc}{section}{Declaration}
+\cleardoublepage
+
+\input{Approval}
+\addcontentsline{toc}{section}{Approval}
+\cleardoublepage
+
+
+\input{Acknowledgement}
+\addcontentsline{toc}{section}{Acknowledgement}
+\cleardoublepage
+
+
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\input{chapter1}
+\cleardoublepage
+\input{chapter2}
+\cleardoublepage
+\input{chapter3}
+\cleardoublepage
+\input{chapter4}
+\cleardoublepage
+\input{chapter5}
+\cleardoublepage
+\input{chapter6}
+\cleardoublepage
+
+\addcontentsline{toc}{section}{References}
+\cleardoublepage
+\end{document}
+
