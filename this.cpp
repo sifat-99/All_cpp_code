@@ -13,6 +13,7 @@ public:
     int multiple()
     {
         return Length * Width;
+        // Returning the multiple of length and width
     }
 
 void compare(area ob)
@@ -36,5 +37,5 @@ void compare(area ob)
         return 0;
         //Close the program
 
-        
+
     }
