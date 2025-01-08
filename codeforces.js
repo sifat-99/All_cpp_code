@@ -110,3 +110,10 @@ function constructTree() {
         console.log(i, i + 1);
     }
 }
+
+
+function recursion(params) {
+
+    for (let first of second) { third }
+
+}
