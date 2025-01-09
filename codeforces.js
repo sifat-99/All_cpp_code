@@ -117,3 +117,7 @@ function recursion(params) {
     for (let first of second) { third }
 
 }
+
+function Tree(params) {
+    
+}
