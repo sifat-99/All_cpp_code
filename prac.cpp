@@ -12,10 +12,19 @@ public:
 flower setter (flower ob)
 {
 cout<<"enter the flower name: ";
+
+
+
+
+
+
 cin>>ob.name;
 cout<<"enter the flower color: ";
 cin>>ob.color;
 return ob;
+
+//return ob;
+
 }
 void get(flower ob)
 {
