@@ -37,3 +37,33 @@ flower ob,ob2;
 ob2 = setter(ob);
 get(ob2);
 }
+int main()
+{
+flower ob,ob2;
+ob2 = setter(ob);
+get(ob2);
+}
+int main()
+{
+flower ob,ob2;
+ob2 = setter(ob);
+get(ob2);
+}
+int main()
+{
+flower ob,ob2;
+ob2 = setter(ob);
+get(ob2);
+}
+int main()
+{
+flower ob,ob2;
+ob2 = setter(ob);
+get(ob2);
+}
+int main()
+{
+flower ob,ob2;
+ob2 = setter(ob);
+get(ob2);
+}
