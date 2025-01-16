@@ -24,6 +24,72 @@ function matchFinder(string1, string2) {
         return false;
     }
 }
+function matchFinder(string1, string2) {
+    if (typeof string1 !== 'string' || typeof string2 !== 'string') {
+        return "Please Enter valid strings";
+    }
+
+    if (string1.includes(string2)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+function matchFinder(string1, string2) {
+    if (typeof string1 !== 'string' || typeof string2 !== 'string') {
+        return "Please Enter valid strings";
+    }
+
+    if (string1.includes(string2)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+function matchFinder(string1, string2) {
+    if (typeof string1 !== 'string' || typeof string2 !== 'string') {
+        return "Please Enter valid strings";
+    }
+
+    if (string1.includes(string2)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+function matchFinder(string1, string2) {
+    if (typeof string1 !== 'string' || typeof string2 !== 'string') {
+        return "Please Enter valid strings";
+    }
+
+    if (string1.includes(string2)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+function matchFinder(string1, string2) {
+    if (typeof string1 !== 'string' || typeof string2 !== 'string') {
+        return "Please Enter valid strings";
+    }
+
+    if (string1.includes(string2)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+function matchFinder(string1, string2) {
+    if (typeof string1 !== 'string' || typeof string2 !== 'string') {
+        return "Please Enter valid strings";
+    }
+
+    if (string1.includes(string2)) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 
 
@@ -119,5 +185,5 @@ function recursion(params) {
 }
 
 function Tree(params) {
-    
+
 }
